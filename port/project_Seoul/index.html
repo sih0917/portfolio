@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ko">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="image/mobile_web_icon.png">
+    <title>서울시청</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    </script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="gotop">
+        <a href="#"><img src="image/btn_top.png"></a>
+    </div>
+    <!-- 상단배너 -->
+    <div id="top_banner">
+        <a href="#">
+            <form action="" method="" id="pop_day">
+                <fieldset>
+                    <legend>이벤트</legend>
+                    <input type="checkbox" name="" id="no_day">
+                    <label for="no_day">
+                        오늘 하루 보지 않기
+                        <img src="image/btn_allmenu_close.png">
+                    </label>
+                </fieldset>
+            </form>
+        </a>
+    </div>
+    <!-- 전체레이아웃 -->
+    <div id="wrap">
+        <!-- 상단영역 -->
+        <div id="header">
+            <span class="logo">
+                <a href="index.html">서울시청</a>
+            </span>
+            <span class="gnb">
+                <ul class="menu">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">나의서울</a></li>
+                    <li><a href="#">전자우편</a></li>
+                    <li><a href="#">서울소개</a></li>
+                    <li><a href="#">시민참여</a></li>
+                    <li><a href="#">부서안내</a></li>
+                    <li><a href="#">청사안내</a></li>
+                </ul>
+            </span>
+            <span class="etc">
+                <ul>
+                    <li><a href="#">서울소식</a></li>
+                    <li><a href="#">응답소</a></li>
+                    <li><a href="#">정보공개</a></li>
+                    <li><a href="#">분야정보</a></li>
+                </ul>
+            </span>
+        </div>
+        <!--// 상단영역 -->
+        <!-- 중앙영역 -->
+        <div id="main">
+            <div class="main_top">
+                <span class="top_logo">
+                    <a href="index.html">
+                        서울특별시
+                    </a>
+                </span>
+                <span class="top_search">
+                    <form action="" method="" id="site_search">
+                        <label for="stxt"><img src="image/keyboard.png"></label>
+                        <input type="text" name="" id="stxt">
+                        <input type="submit" name="" id="sbt">
+                    </form>
+                </span>
+                <span class="top_weather">
+                    <span class="w_t1">기상특보</span>
+                    <span class="w_t2">폭염경보</span>
+                    <span class="w_t3">08월 12일 17시 00분</span>
+                    <span class="w_close">
+                        <img src="image/btn_close_white.png">
+                    </span>
+                </span>
+                <span class="top_language">
+                    <select id="select_lang">
+                        <option>ENGLISH</option>
+                        <option>简体中文</option>
+                        <option>繁体中文</option>
+                        <option>français</option>
+                        <option>español</option>
+                        <option>日本語</option>
+                    </select>
+                    <input type="button" value="GO" id="select_bt">
+                </span>
+            </div>
+            <div class="main_banner">
+                <div id="main_banner_slide">
+                    <div class="slide_img">
+                        <a href="#"></a>
+                    </div>
+                    <span class="slide_left"></span>
+                    <span class="slide_right"></span>
+                </div>
+                <div class="main_banner_list">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="image/banner_01.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/banner_02.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/banner_03.png"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_category">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_house.png">
+                            <span class="cate_txt">주택</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_economy.png">
+                            <span class="cate_txt">경제</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_traffic.png">
+                            <span class="cate_txt">교통</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_environment.png">
+                            <span class="cate_txt">환경</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_welfare.png">
+                            <span class="cate_txt">복지</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_safty.png">
+                            <span class="cate_txt">안전</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_culture.png">
+                            <span class="cate_txt">문화</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/icon_work.png">
+                            <span class="cate_txt">행정</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_notice">
+                <div class="notice">
+                    <h2>서울은 지금</h2>
+                    <span class="notice_img">
+                        <img src="image/news.jpg">
+                        <span class="notice_txt"><a href="#">서울지하철 역에 있는 이...</a></span>
+                    </span>
+                    <ul class="notice_list">
+                        <li>
+                            <a href="#">
+                                <span class="notice_list_cate">고시공고</span>
+                                <span class="notice_list_tit">시민참여 문해학습 활성화 공모사업</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notice_list_cate">입찰공고</span>
+                                <span class="notice_list_tit">「서울형 뉴딜 일자리 공유콘텐츠 창작자 및 매니...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notice_list_cate">채용시험</span>
+                                <span class="notice_list_tit">서울특별시 일반임기제공무원 채용 서류전형결과...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notice_list_cate">보도자료</span>
+                                <span class="notice_list_tit">서울시, 온열질환 구급활동 통계발표, 60대 이상 폭...</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social_banner">
+                    <a href="#">
+                        <span class="b_1">소셜시장실</span>
+                        <span class="b_2">시대와 나란히 시민과 나란히</span>
+                        <span class="b_3 dot_7d7d7d">공약&매니페스토</span>
+                    </a>
+                    <span class="sns_link">
+                        <a href="#">링크1</a>
+                        <a href="#">링크2</a>
+                        <a href="#">링크3</a>
+                    </span>
+                </div>
+            </div>
+            <div class="main_service">
+                <div class="main_service_left">
+                    <h2>주요서비스</h2>
+                    <ul class="service_list">
+                        <li><a href="#">응답소(민원신고)</a></li>
+                        <li><a href="#">서울일자리</a></li>
+                        <li><a href="#">평생학습포털</a></li>
+                        <li><a href="#">보육포털</a></li>
+                        <li><a href="#">부동산정보</a></li>
+                        <li class="mt36"><a href="#">서울안전누리</a></li>
+                        <li class="mt36"><a href="#">공공서비스예약</a></li>
+                        <li class="mt36"><a href="#">서울관광</a></li>
+                        <li class="mt36"><a href="#">서울의공원</a></li>
+                        <li class="mt36"><a href="#">시의회</a></li>
+                    </ul>
+                    <span class="view_all">
+                        <a href="#">전체보기</a>
+                    </span>
+                </div>
+                <div class="main_service_right">
+                    <ul class="service_link">
+                        <li class="dot_7d7d7d"><a href="#">민주주의서울</a></li>
+                        <li class="dot_7d7d7d"><a href="#">법무행정서비스</a></li>
+                        <li class="dot_7d7d7d"><a href="#">서울시 ETAX</a></li>
+                        <li class="dot_7d7d7d"><a href="#">내 손안에 서울</a></li>
+                        <li class="dot_7d7d7d"><a href="#">복지포털</a></li>
+                    </ul>
+                    <span class="setting">
+                        <a href="#">
+                            설정하기
+                            <span class="set_icon"></span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="main_news">
+                <div class="news_top">
+                    <h2>새소식</h2>
+                    <span class="news_more">
+                        <a href="#">
+                            전체보기
+                            <span class="icon_news"></span>
+                        </a>
+                    </span>
+                </div>
+                <div class="news_main">
+                    <div class="news_main_left">
+                        <div class="news_box news_pic">
+                            <span class="news_img">
+                                <a href="#"><img src="image/news_01.jpg"></a>
+                            </span>
+                            <span class="news_cate bg_brown">주택</span>
+                            <span class="news_tit">
+                                <a href="">서울시 '역세권 청년주택' 순항 중...올 하반기 2,136호 본격 공급</a>
+                            </span>
+                            <span class="news_desc">
+                                서울시가 교통이 편리하고 살기 좋은 ‘직주근접’ 역세권에서 청년들이 안정적으로 살 수 있도록 특단의 청년 주거불안 해소대책으로 마련한 ‘역세권 청년주택’이 2022년까지 8만
+                            </span>
+                        </div>
+                        <div class="news_box">
+                            <span class="news_cate bg_brown">주택</span>
+                            <span class="news_tit">
+                                <a href="">물놀이·전시…서울도시건축전시관, 여름맞이</a>
+                            </span>
+                            <span class="news_desc">
+                                근대 역사의 장소적 가치회복과 도심경관 복원사업의 일환으로 옛 국세청 별관 자리에 건립된 서울도시건축전시관은 무더운 여름을 대비하여, 인근 직장인 뿐만 아니라, 어린이·
+                            </span>
+                        </div>
+                        <div class="news_box">
+                            <span class="news_cate bg_green">환경</span>
+                            <span class="news_tit">
+                                <a href="">서울시, 한강몽땅 축제 속 일회용품 쓰레기…</a>
+                            </span>
+                            <span class="news_desc">
+                                서울시(한강사업본부)는 “최근 심각성을 더해가고 있는 일회용품 쓰레기 문제와 관련하여 2019 한강몽땅 여름축제에서도 시민의 경각심을 일깨우고 해결방안에 대해 함께 생각
+                            </span>
+                        </div>
+                        <div class="news_board">
+                            <div class="board_top">
+                                <h2>이벤트 신청</h2>
+                                <a href="#" class="board_more">더보기</a>
+                            </div>
+                            <div class="board_main">
+                                <ul>
+                                    <li>
+                                        <b>[진행중]</b>
+                                        <span class="board_purple">문화</span>
+                                        <a href="#">2019 서울달리기대회(SEOUL RACE)</a>
+                                    </li>
+                                    <li>
+                                        <b>[진행중]</b>
+                                        <span class="board_green">환경</span>>
+                                        <a href="#">환경부, 이모티콘 공모전 '환경티콘을</a>
+                                    </li>
+                                    <li>
+                                        <b>[마감]</b>
+                                        <span class="board_green">환경</span>
+                                        <a href="#">'온실가스 감축, 시민이 답하다!' 릴레이</a>
+                                    </li>
+                                    <li>
+                                        <b>[마감]</b>
+                                        <span class="board_green">환경</span>
+                                        <a href="#">제4회 호숫가영화제 2단계 이벤트! 최종</a>
+                                    </li>
+                                    <li>
+                                        <b>[마감]</b>
+                                        <span class="board_blue">행정</span>
+                                        <a href="#">지속가능 서울 시민공청회 참가단 모집</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_main_center">
+                        <div class="news_box news_pic">
+                            <span class="news_img">
+                                <a href="#"><img src="image/news_02.jpg"></a>
+                            </span>
+                            <span class="news_cate bg_brown">주택</span>
+                            <span class="news_tit">
+                                <a href="">서울시, 노후 저층주거지 정비(가꿈주택사업) 참여자 모집…400호 수리 목표</a>
+                            </span>
+                            <span class="news_desc">
+                                서울시가 저층주거지 노후주택 집수리와 골목길 정비를 지원하는 ‘서울가꿈주택사업’ 예산을 지난해 대비 약 16배 늘어난 74억 원으로 대폭 확대해 시행하고 있는 가운데, 8월에
+                            </span>
+                        </div>
+                        <div class="news_box news_pic">
+                            <span class="news_img">
+                                <a href="#"><img src="image/news_4.jpg"></a>
+                            </span>
+                            <span class="news_cate bg_brown">주택</span>
+                            <span class="news_tit">
+                                <a href="">'2019 서울도시건축비엔날레' 30% 할인혜택 잡아라…한 달간 사전예매</a>
+                            </span>
+                            <span class="news_desc">
+                                전 세계 주요 도시와 도시·건축 관련 기관·대학·전문가들이 총집결하는 ｢2019 서울도시건축비엔날레｣의 유·무료 전시, 영화까지 주요 프로그램을 최대 30% 할인된 가격에 즐길
+                            </span>
+                        </div>
+                        <div class="news_board">
+                            <div class="board_top">
+                                <h2>이달의 행사 및 축제</h2>
+                                <a href="#" class="board_more">더보기</a>
+                            </div>
+                            <div class="board_main">
+                                <ul>
+                                    <li>
+                                        <span class="board_purple">문화</span>
+                                        <a href="#">한국근현대명화전 《근대의 꿈: 꽃나무는 심어</a>
+                                    </li>
+                                    <li>
+                                        <span class="board_purple">문화</span>
+                                        <a href="#">한성백제박물관, 6～8월 土 무료‘사계 콘서</a>
+                                    </li>
+                                    <li>
+                                        <span class="board_purple">문화</span>
+                                        <a href="#">(7.19~8.18, 한강여의도공원)제100회 전국</a>
+                                    </li>
+                                    <li>
+                                        <span class="board_purple">문화</span>
+                                        <a href="#">2019.8월 문화달력</a>
+                                    </li>
+                                    <li>
+                                        <span class="board_blue">행정</span>
+                                        <a href="#">당신의 '봉.선.이'를 찾습니다!</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_main_right">
+                        <div class="news_box news_pic">
+                            <span class="news_img">
+                                <a href="#"><img src="image/news_03.jpg"></a>
+                            </span>
+                            <span class="news_cate bg_brown">주택</span>
+                            <span class="news_tit">
+                                <a href="">서울시, 여름방학 맞이‘어린이 1일 한옥건축캠프’개최</a>
+                            </span>
+                            <span class="news_desc">
+                                서울시와 (사)문화다움은 북촌에 위치하고 있는 북촌문화센터, 한옥지원센터, 마을서재에서 여름방학 맞이 ‘어린이 1일 한옥건축캠프’를 개최한다.
+                            </span>
+                        </div>
+                        <div class="news_box">
+                            <span class="news_cate bg_green">환경</span>
+                            <span class="news_tit">
+                                <a href="">제16회 에너지의 날 행사, 서울광장에서 개최</a>
+                            </span>
+                            <span class="news_desc">
+                                제16회 에너지의 날 행사 시민참여 안내
+                            </span>
+                        </div>
+                        <div class="news_box">
+                            <span class="news_cate bg_purple">문화</span>
+                            <span class="news_tit">
+                                <a href="">서울시, 8월부터‘찾아가는 스포츠 검진센터’…</a>
+                            </span>
+                            <span class="news_desc">
+                                시민들의 생활공간에 직접 찾아가 과학적으로 체력을 측정하고, 맞춤형 운동 처방을 제공하는 「찾아가는 스포츠 검진센터」가 8월부터 최초로 운영을 시작한다.
+                            </span>
+                        </div>
+                        <div class="traffic_info">
+                            <h2>생활정보 서비스</h2>
+                            <ul>
+                                <li><a href="#">버스</a></li>
+                                <li><a href="#">지하철</a></li>
+                                <li><a href="#">도로소통</a></li>
+                                <li><a href="#">심야버스</a></li>
+                                <li><a href="#">페스티벌서울</a></li>
+                                <li><a href="#">부동산</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_slide">
+                <div id="banner_slide">
+                    <ul>
+                        <li><a href="#" target="_blank"><img src="image/slide_01.jpg"></a></li>
+                        <li><a href="#" target="_blank"><img src="image/slide_02.jpg"></a></li>
+                        <li><a href="#" target="_blank"><img src="image/slide_03.jpg"></a></li>
+                        <li><a href="#" target="_blank"><img src="image/slide_01.jpg"></a></li>
+                        <li><a href="#" target="_blank"><img src="image/slide_02.jpg"></a></li>
+                        <li><a href="#" target="_blank"><img src="image/slide_03.jpg"></a></li>
+                    </ul>
+                </div>
+                <div class="banner_control">
+                    <span class="banner_prev">이전</span>
+                    <span class="banner_pause">멈춤</span>
+                    <span class="banner_next">다음</span>
+                </div>
+            </div>
+        </div>
+        <!--// 중앙영역 -->
+        <!-- 하단영역 -->
+        <div id="footer">
+            <div class="footer_top">
+                <span class="footer_menu">
+                    <ul>
+                        <li><a href="#">홈페이지 도우미</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#">저작권 정책</a></li>
+                        <li><a href="#">영상정보처리기기 운영 관리방침</a></li>
+                        <li><a href="#">홈페이지 바로잡기</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </span>
+                <span class="footer_sns">
+                    <ul>
+                        <li><a href="#">링크</a></li>
+                        <li><a href="#">링크</a></li>
+                        <li><a href="#">링크</a></li>
+                        <li><a href="#">링크</a></li>
+                        <li><a href="#">링크</a></li>
+                        <li><a href="#">링크</a></li>
+                        <li><a href="#">링크</a></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="footer_bot">
+                <span class="footer_logo"></span>
+                <span class="footer_copy">
+                    서울특별시청 04524 서울특별시 중구 세종대로 110 <a href="#">[찾아오시는 길]</a> <br>
+                    대표전화 : 02-120 또는 02-731-2120 <br>
+                    © Seoul Metropolitan Government all rights reserved
+                </span>
+                <span class="footer_mark">
+                    <a href="#">
+                        <img src="image/footer_mark_wah.png" alt="웹접근성표준" title="웹접근성표준">
+                    </a>
+                </span>
+            </div>
+        </div>
+        <!--// 하단영역 -->
+    </div>
+</body>
+
+</html>

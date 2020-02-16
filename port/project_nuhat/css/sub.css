@@ -1,0 +1,164 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+
+ /*서브페이지 : best hat 영역 */
+ /*전체 -> 스크롤로 변경 */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    font-family: 'Montserrat', sans-serif;
+}
+#wraper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    z-index: 99;
+}
+#main {
+    position: relative;
+    min-height: 600px;
+    margin-top: 154px;
+    margin-left: 230px;
+    margin-right: 45px;
+}
+.cate_title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #353535;
+    font-size: 20px;
+    font-weight: 500;
+}
+.item_menu {
+    position: relative;
+    line-height: 40px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.good_count {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.good_count span {
+    font-size: 11px;
+}
+.good_count span:nth-child(2) {
+    font-weight: bold;
+}
+.item_sort {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+.item_sort li {
+    position: relative;
+    float: left;
+    padding: 0 10px;
+}
+.item_sort li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 1px;
+    height: 10px;
+    background: #eaeaea;
+}
+.item_sort li:first-child:before {
+    display: none;
+}
+.item_sort li a {
+    font-size: 11px;
+}
+
+/* 제품 목록 창*/
+.goods {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.goods > ul {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.goods > ul >li {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    float: left;
+}
+.goods> ul > li > div {
+    position: relative;
+    display: inline-block;
+    margin: 0px 15px 70px 15px;
+}
+.goods> ul > li > div > a > img {
+    width: 100%;
+    height: 100%;
+}
+.goods p {
+    text-align: center;
+}
+.good_name {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+.good_name a {
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+}
+.good_price {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+.good_price a {
+    color: #000;
+    font-size: 11px;
+}
+.good_detail {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    color: #000;
+    font-size: 11px;
+}
+/* 페이지 클릭 하는 메뉴*/
+.page_click {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+.page_click div {
+    display: inline-block;
+}
+.page_click a {
+    display: inline-block;
+    vertical-align: middle;
+}
+.page_click span a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 5px;
+    margin-top: -6px;
+    font-family: sans-serif;
+}
+
+/* 하단영역 */
+#footer {
+    position: relative;
+    width: 100%;
+}

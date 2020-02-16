@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="image/mobile_web_icon.png">
+    <title>대구시설공단</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- 전체레이아웃 -->
+    <div id="wrap">
+        <!-- 헤더영역 -->
+        <div id="header">
+            <!-- 헤더 상단 영역 -->
+            <div class="top_header">
+                <div class="container">
+                    <ul class="top_menu_left">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">즐겨찾기추가</a></li>
+                    </ul>
+                    <ul class="top_menu_right">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">직원전용방</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 헤더 중간 영역 -->
+            <div class="middle_header, container">
+                <!-- 메인로고 -->
+                <span class="logo">
+                    <a href="index.html">
+                        <img src="images/logo_h1.png" title="대구시설공단" alt="대구시설공단">
+                    </a>
+                </span>
+                <!-- 검색창 영역 -->
+                <div class="search">
+                    <form action="action" method="get" id="site_search">
+                        <label for="stxt">통합검색</label>
+                        <img src="images/search_deco.png" alt="search_deco">
+                        <input type="text" name="total_search" id="stxt" placeholder="검색어를 입력하세요." title="검색어 입력">
+                        <input type="submit" name="submit" id="sbt">
+                    </form>
+                </div>
+                <!-- 날씨 정보 -->
+                <div class="weather">
+                    <span class="weather_icon">
+                        <img src="images/img_weather04.png" title="흐림" alt="흐림">
+                    </span>
+                    <div class="weather_txt">
+                        <ul>
+                            <li class="weather_txt1">
+                                <span>30.2℃</span>
+                                <b>흐림</b>
+                            </li>
+                            <li class="weather_txt2">
+                                미세먼지
+                                <span>37.0㎍/㎥</span>
+                            </li>
+                            <li class="weather_txt3">
+                                대기환경지수
+                                <span>보통</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 헤더 하단 영역 -->
+            <div class="bottom_header">
+                <div class="container">
+                    <ul class="main_menu">
+                        <li><a href="#">체육시설</a></li>
+                        <li><a href="#">도로·신천</a></li>
+                        <li><a href="#">문화복지유통</a></li>
+                        <li><a href="#">교통시설</a></li>
+                        <li><a href="#">고객행복센터</a></li>
+                        <li><a href="#">윤리경영</a></li>
+                        <li><a href="#">정보공개</a></li>
+                        <li><a href="#">공단소개</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--// 헤더영역 -->
+        <!-- 메인영역 -->
+        <div id="main">
+            <!-- 메인 상단 영역 -->
+            <div class="main_1">
+                <div class="container">
+                    <!-- 대구시설공단 타이틀 -->
+                    <div class="main_title">
+                        <span>대구시설공단은</span>
+                        <br>
+                        <span>행복한</span>
+                        <span>도시</span>
+                        <span>대구</span>
+                        <span>를 만들어갑니다.</span>
+                    </div>
+                    <!-- 퀵버튼(원) 영역 -->
+                    <div class="quick_wrap">
+                        <ul class="quick">
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">고객의소리</span>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">도로파손신고</span>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">가로등고장신고</span>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">
+                                        부패공익신고센터
+                                        <span class="callcenter">(청신호 콜센터)</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">대학생서포터즈</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">체육시설통합예약</span>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="quick_img"></span>
+                                    <span class="quick_txt">화장예약</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 메인 상단 보드 영역 -->
+                    <div class="board_wrap">
+                        <!-- 상단보드 알림 영역 -->
+                        <div class="notice">
+                            <ul class="notice_menu">
+                                <li>
+                                    <span class="notice_menu_tit">알림마당</span>
+                                    <ul class="notice_list">
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설공단 한시적근로자(주차관리원)</span>
+                                                <span class="notice_class c1">[주차]</span>
+                                                <span class="notice_date">2019.08.20</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">두류수영장 2019년 9월 강습 안내[인터넷</span>
+                                                <span class="notice_class c2">[두류]</span>
+                                                <span class="notice_date">2019.08.14</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">올림픽기념국민생활관 2019년 9월 강습</span>
+                                                <span class="notice_class c3">[올림픽]</span>
+                                                <span class="notice_date">2019.08.14</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">서재문화체육센터 2019년 9월 강습안내</span>
+                                                <span class="notice_class c4">[서재]</span>
+                                                <span class="notice_date">2019.08.14</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">칠성고가교 정밀안전진단 용역 참여기술자</span>
+                                                <span class="notice_class c6">[구조물]</span>
+                                                <span class="notice_date">2019.08.08</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="notice_menu_tit">입찰정보</span>
+                                    <ul class="notice_list_hidden">
+                                        <li><a href="#">
+                                                <span class="notice_txt">민간위탁주차장 수탁관리자 선정 입찰 공고</span>
+                                                <span class="notice_date">2019.08.26</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">내당네거리 등 20개소 노면표시 도색공사</span>
+                                                <span class="notice_date">2019.08.23</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">김승1교(수목원,테크노폴리스 방향), 명곡…</span>
+                                                <span class="notice_date">2019.08.19</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">본리3교(수목원,테크노폴리스 방향), 쌍계…</span>
+                                                <span class="notice_date">2019.08.19</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">달서교 정밀안전진단 용역</span>
+                                                <span class="notice_date">2019.08.19</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="notice_menu_tit">보도자료</span>
+                                    <ul class="notice_list_hidden">
+                                        <li><a href="#">
+                                                <span class="notice_txt">범어지하도상가, 추성맞이 볼거리 즐길거…</span>
+                                                <span class="notice_class c7">[범어]</span>
+                                                <span class="notice_date">2019.08.20</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설公 대구역지하상가 ‘야생화 그림…</span>
+                                                <span class="notice_class c5">[지하]</span>
+                                                <span class="notice_date">2019.08.14</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설공단, 찾아가는 나드리 콜 데이 설…</span>
+                                                <span class="notice_class c8">[이동]</span>
+                                                <span class="notice_date">2019.08.14</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설공단, 깨끗한 버스승강장 관리 위…</span>
+                                                <span class="notice_class c9">[승강장]</span>
+                                                <span class="notice_date">2019.08.14</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">칠성고가교 정밀안전진단 용역 참여기술자</span>
+                                                <span class="notice_class c7">[범어]</span>
+                                                <span class="notice_date">2019.08.08</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="notice_menu_tit">채용정보</span>
+                                    <ul class="notice_list_hidden">
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구실내빙상장 주말 파트타임 근로자 공…</span>
+                                                <span class="notice_date">2019.08.27</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">한시적 근로자(안전관리원 보조) 공개채용…</span>
+                                                <span class="notice_date">2019.08.26</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설공단 두류 수영장 한시적근로자 및…</span>
+                                                <span class="notice_date">2019.08.23</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설공단 서재문화체육센터 한시적…</span>
+                                                <span class="notice_date">2019.08.23</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="notice_txt">대구시설공단 한시적근로자(주차관리원)…</span>
+                                                <span class="notice_date">2019.08.16</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                        <!-- 상단보드 슬라이드 영역 -->
+                        <div class="board_slide">
+                            <ul class="board_slide_visual">
+                                <li><a href="#"><img src="images/s01.jpg" alt="슬라이드 이미지"></a></li>
+                                <li><a href="#"><img src="images/s02.jpg" alt="슬라이드 이미지"></a></li>
+                                <li><a href="#"><img src="images/s03.jpg" alt="슬라이드 이미지"></a></li>
+                            </ul>
+                            <span class="slide_btn_prev" title="주요소식 이전 보기">
+                                <span></span>
+                            </span>
+                            <span class="slide_btn_next" title="주요소식 다음 보기">
+                                <span></span>
+                            </span>
+                            <ul class="slide_page_btn">
+                                <li class="pause" title="주요소식 정지"></li>
+                                <li class="circle bt_on"></li>
+                                <li class="circle"></li>
+                                <li class="circle"></li>
+                                <li class="circle"></li>
+                                <li class="circle"></li>
+                            </ul>
+                        </div>
+                        <!-- 상단보드 체육·교통·문화 영역 -->
+                        <div class="kind_board">
+                            <ul class="kind">
+                                <li>
+                                    <span class="kind_menu">체육시설</span>
+                                    <ul class="kind_submenu">
+                                        <li><a href="#" target="_blank" title="새창열기">두류수영장</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">대구국제사격장</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">대덕승마장</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">대구승마힐링센터</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">올림픽기념국민생활관</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">서재문화체육센터</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">대구실내빙상장</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="kind_menu kind_menu_bar">도로·교통</span>
+                                    <ul class="kind_submenu">
+                                        <li><a href="#" target="_blank" title="새창열기">도로관리</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">가로등관리</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">터널관리</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">신천둔치관리소</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">공영주차장</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">이동지원센터</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">농수산주차상가</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">동대구역광장</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">신서화물자동차공영차고지</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">시내버스유개승강장</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="kind_menu kind_menu_bar">문화복지</span>
+                                    <ul class="kind_submenu">
+                                        <li><a href="#" target="_blank" title="새창열기">명복공원</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">지하상가</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">국채보상운동기념공원</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">2·28기념중앙공원</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">경상감영공원</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">대중교통전용지구</a></li>
+                                        <li><a href="#" target="_blank" title="새창열기">대구콘서트하우스관리소</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="kind_tel">
+                                <img src="images/kind_tel.png" alt="전화 이미지">
+                                <span class="kind_tel_right">
+                                    <span class="kind_tel_tit">대구시설공단 안내전화</span>
+                                    <span class="kind_tel_number">1577-6556</span>
+                                    <span class="kind_tel_tt">고객의 입장에서 먼저 귀를 기울이겠습니다.</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 소개 영역 -->
+            <div class="main_2">
+                <div class="container">
+                    <!-- 소개 왼쪽 영역 -->
+                    <div class="main_2_left">
+                        <div class="logo2"></div>
+                        <div class="info_tit">대구시설공단 소개</div>
+                        <div class="info_tt">최고의 안전, 최상의 서비스로 250만 대구시민의 삶의 질 향상을 위해 노력합니다.</div>
+                    </div>
+                    <!-- 소개 오른쪽 영역 -->
+                    <div class="main_2_right">
+                        <ul class="info">
+                            <li><a href="#">직원안내</a></li>
+                            <li><a href="#">조직안내</a></li>
+                            <li><a href="#">부서별 안내</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 하단보드 영역-->
+            <div class="main_3">
+                <div class="container">
+                    <div>
+                        <!-- 하단보드 왼쪽 영역 -->
+                        <div class="main_3_box">
+                            <!-- 알림존 슬라이드 영역 -->
+                            <div class="small_slide">
+                                <div class="small_slide_tit">
+                                    <h3>알림존</h3>
+                                    <ul class="small_slide_btn">
+                                        <li title="알림존 이전 보기">prev</li>
+                                        <li title="알림존 다음 보기">next</li>
+                                        <li title="알림존 정지">pause</li>
+                                    </ul>
+                                </div>
+                                <div class="small_slide_visual">
+                                    <img src="images/b01.jpg" alt="슬라이드 이미지">
+                                </div>
+                            </div>
+                            <!-- 정보공개 영역 -->
+                            <div class="banner_box">
+                                <a href="" class="banner" title="정보공개 바로가기">
+                                    <div class="banner_txt">
+                                        <h3>정보공개</h3>
+                                        <p>경영효율성을 높이고 시민 서비스의 질을 <br>
+                                            향상시키고자 실시하는 제도입니다.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 하단보드 중앙 영역 -->
+                        <div class="main_3_box">
+                            <!-- 페이스북 영역 -->
+                            <div class="facebook">
+                                <div class="facebook_tit">
+                                    <img src="images/sns_title.png" alt="facebook">
+                                    <p>대구시설공단 공식 SNS소식입니다.</p>
+                                    <a href="https://www.facebook.com/dgsisul/" title="대구시설공단 페이스북 이동" target="_blank">더보기</a>
+                                </div>
+                                <div class="facebook_script">
+                                    <div>
+                                        facebook link 위치입니다.<br><br>
+                                        대구시설공단<br><br>
+                                        11월 15일 금요일<br>
+                                        오늘은 대구 #북구청 과 대구시설공단의<br>
+                                        업무협약식(MOU)이 있었던 날입니다^^<br>
+                                        <div>
+                                            북구의 체육․ 관광인프라 활용 증대와 대구국제사격장, 실내빙상장 등 공단이 관리하고 있는 체육시설 활성화를 위해..
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 하단보드 오른쪽 영역 -->
+                        <div class="main_3_box">
+                            <!-- 공단보도자료 영역 -->
+                            <div class="news">
+                                <div class="news_tit">
+                                    <h3>공단보도자료</h3>
+                                    <p>대구시설공단 최신 보도자료 입니다.</p>
+                                    <a href="#" title="공단보도자료 더보기">더보기</a>
+                                </div>
+                                <div class="news_script">
+                                    <ul>
+                                        <li><a href="#">
+                                                <span class="news_script_img"><img src="images/02.png" alt="뉴스 이미지"></span>
+                                                <div class="news_script_tt">
+                                                    <p>범어지하도상가"폭염대비 1:1 상담"건강 캠페인 실시</p>
+                                                    <span>2019.08.19</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="news_script_img"><img src="images/03.png" alt="뉴스 이미지"></span>
+                                                <div class="news_script_tt">
+                                                    <p>대구시설공단, 찾아가는 고객차량 무상 점검·정비 서비스 실시</p>
+                                                    <span>2019.08.19</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <span class="news_script_img"><img src="images/04.png" alt="뉴스 이미지"></span>
+                                                <div class="news_script_tt">
+                                                    <p>대구국제 사격장(대구시설공단) 사격국가 대표 후보 선수 전지훈련지로 선정</p>
+                                                    <span>2019.08.13</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 하단 롤배너 영역 -->
+                    <div class="pd10">
+                        <div class="rollbanner_wrap">
+                            <div class="rollbanner">
+                                <ul>
+                                    <li>
+                                        <img src="images/bannerButtom_01.jpg" class="rollbanner_img" alt="롤배너">
+                                        <span class="rollbanner_tt">
+                                            민원을 두드리면 언제든지 들어주고<br>
+                                            해결해 주는 시민과의 소통공간입니다
+                                        </span>
+                                        <a href="#" class="rollbanner_quick_btn">바로가기</a>
+                                    </li>
+                                    <li>
+                                        <img src="images/bannerButtom_02.jpg" class="rollbanner_img" alt="롤배너">
+                                        <span class="rollbanner_tt">
+                                            다양한 대구시통합모니터단 활동을<br>
+                                            보실 수 있습니다.
+                                        </span>
+                                        <a href="#" class="rollbanner_quick_btn">바로가기</a>
+                                    </li>
+                                    <li>
+                                        <img src="images/bannerButtom_03.jpg" class="rollbanner_img" alt="롤배너">
+                                        <span class="rollbanner_tt">
+                                            대구시에 설치한 전기차 충전기에 대하여<br>
+                                            사용자에게 충전기 정보를제공합니다.
+                                        </span>
+                                        <a href="#" class="rollbanner_quick_btn">바로가기</a>
+                                    </li>
+                                    <li>
+                                        <img src="images/bannerButtom_04.jpg" class="rollbanner_img" alt="롤배너">
+                                        <span class="rollbanner_tt">
+                                            여권, 차량등록, 지역축제, 시정일반에 대해<br>
+                                            답변받을 수 있습니다.
+                                        </span>
+                                        <a href="#" class="rollbanner_quick_btn">바로가기</a>
+                                    </li>
+                                    <li>
+                                        <img src="images/bannerButtom_05.jpg" class="rollbanner_img" alt="롤배너">
+                                        <span class="rollbanner_tt">
+                                            대구시운영서비스의<br>
+                                            대구음악창의도시 입니다
+                                        </span>
+                                        <a href="#" class="rollbanner_quick_btn">바로가기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 롤배너 버튼 영역 -->
+                            <div class="rollbanner_btn">
+                                <span class="rollbanner_next" title="다음 보기">next</span>
+                                <span class="rollbanner_prev" title="이전 보기">prev</span>
+                                <span class="rollbanner_pause" title="정지">pause</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// 메인영역 -->
+        <!-- 하단영역 -->
+        <div id="footer">
+            <!-- 하단 탑 영역 -->
+            <div class="footer_top">
+                <div class="container">
+                    <ul class="footer_top_menu">
+                        <li class="footer_top_on" title="펼치기">
+                            <a href="">관련기관 바로가기</a>
+                            <ul class="footer_on_submenu">
+                                <li><a href="#">대구광역시</a></li>
+                                <li><a href="#">대구환경시설공단</a></li>
+                                <li><a href="#">대구도시철도공사</a></li>
+                                <li><a href="#">대구도시공사</a></li>
+                                <li><a href="#">대구의료원</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer_top_on" title="펼치기">
+                            <a href="">산하기관 바로가기</a>
+                            <ul class="footer_on_submenu">
+                                <li><a href="#">두류수영장</a></li>
+                                <li><a href="#">명복공원</a></li>
+                                <li><a href="#">올림픽기념국민생활관</a></li>
+                                <li><a href="#">도심공원</a></li>
+                                <li><a href="#">지하상가</a></li>
+                                <li><a href="#">신천관리소</a></li>
+                                <li><a href="#">대덕승마장</a></li>
+                                <li><a href="#">대구국제사격장</a></li>
+                                <li><a href="#">도로관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">회원약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">부서 및 직원검색</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 하단 바텀 영역 -->
+            <div class="footer_bot">
+                <div class="container">
+                    <div class="footer_logo">
+                        <img src="images/logo_footer.png" alt="하단 로고">
+                    </div>
+                    <span class="adress">
+                        (42479) 대구광역시 남구 대명로 29 &nbsp;TEL : 1577-6556 &nbsp;FAX : (053)603-1040 &nbsp;사업자등록번호 : 502-82-11974 <br>
+                        © Daegu Infrastructure Corporation all rights reserved.
+                    </span>
+                    <div class="footer_bot_right">
+                        <span class="mobile">
+                            <a href="#">모바일 홈페이지</a>
+                        </span>
+                        <span class="mark">
+                            <a href="http://www.kwacc.or.kr/" title="한국웹접근성평가센터 새창 열림" target="_blank">
+                                <img src="images/bottom_wa.png" alt="한국웹접근성평가센터">
+                            </a>
+                        </span>
+                        <span class="bacord">
+                            <img src="images/bottom_qr.png" alt="QR코드">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// 하단영역 -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,417 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Ropa+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+/*특이한 레이아웃*/
+body {
+    margin-right: 110px;
+    background: #f4f4f4;
+
+}
+
+/*공통요소*/
+
+/*전체레이아웃*/
+#wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*상단영역*/
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 95px;
+    z-index: 9999;
+
+    background: #fff;
+    border-bottom: 2px solid #a3a3a3;
+    text-align: center;
+
+    min-width: 1380px;
+}
+
+.logo {
+    position: absolute;
+    display: inline-block;
+    left: 10px;
+    top: 10px;
+}
+
+.etc_menu {
+    position: absolute;
+    display: inline-block;
+    left: 148px;
+    top: 10px;
+    font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+    color: #606060;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.etc_menu a {
+    color: #606060;
+}
+
+.etc_menu ul {
+    position: relative;
+    display: block;
+}
+
+.etc_menu ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.etc_menu ul li:last-child {
+    margin-right: 0px;
+}
+
+.gnb {
+    position: relative;
+    display: inline-block;
+    margin-top: 42px;
+    margin-left: -90px;
+}
+
+.gnb>ul {
+    position: relative;
+
+    /*overflow: hidden;*/
+    /*background: #fff;*/
+}
+
+.gnb>ul>li {
+    position: relative;
+    display: block;
+    float: left;
+    border: 1px solid #a3a3a3;
+    margin-left: -1px;
+
+    min-width: 120px;
+}
+
+.gnb>ul>li>a {
+    position: relative;
+    display: block;
+    line-height: 50px;
+
+    padding: 0px 45px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3b3b3b;
+    font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+32,ededed+100 */
+    background: rgb(255, 255, 255);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 32%, rgba(237, 237, 237, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 32%, rgba(237, 237, 237, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 32%, rgba(237, 237, 237, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+    /* IE6-9 */
+}
+.gnb > ul > li > a:hover {
+	text-decoration: underline;
+}
+.gnb > ul > li:hover > a {
+	background: #fff;
+}
+.gnb > ul > li:hover > .submenu {
+	display: block;
+}
+.submenu {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	background: #fff;
+	padding-bottom: 20px;
+}
+.submenu > li {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: 5px 0;
+}
+.submenu > li:first-child {
+	border-top: 2px solid #d4d4d4;
+}
+.submenu_tit {
+	position: relative;
+	display: block;
+	color: #9e9e9e;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+	padding: 10px 0;
+	padding-bottom: 25px;
+}
+
+.submenu_tit:after {
+	content: '';
+	width: 4px;
+	height: 2px;
+	background: #aeaeae;
+	position: absolute;
+	left: 50%;
+	margin-left: -2px;
+	bottom: 10px;
+}
+
+.submenu_sub {
+	position: relative;
+	display: block;
+	font-size: 11px;
+	color: #5a5a5a;
+	font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+.search {
+    position: absolute;
+    display: inline-block;
+    right: 115px;
+    bottom: 25px;
+}
+
+.search fieldset {
+    border: none;
+}
+
+.search legend {
+    display: none;
+}
+
+.search label {
+    display: none;
+}
+
+#stxt {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    border: 1px solid #a8a8a8;
+    float: left;
+    margin-top: 1px;
+    color: #333;
+
+    /*stxt 안에 글자 쓸때 들여 쓰기*/
+    /*text-indent: 15px*/
+    /*or*/
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+    /*or*/
+    padding: 0 15px;
+}
+
+#stxt:focus {
+    outline-style: none;
+}
+
+#sbt {
+    position: relative;
+    vertical-align: middle;
+    float: left;
+}
+
+/*메인영역*/
+#main {
+    position: relative;
+    width: 100%;
+}
+.visual {
+	position: relative;
+}
+.slide {
+	position: relative;
+	width: 100%;
+	height: 580px;
+	overflow: hidden;
+	background: url('../image/mainSlide_03.jpeg') #303030 no-repeat center;
+}
+.slide_txt {
+	position: relative;
+	background: #3c3b39;
+	text-align: center;
+}
+.good {
+	position: relative;
+	text-align: center;
+	background: #f4f4f4;
+	padding: 13px 0;
+}
+.best_item {
+	position: relative;
+	display: inline-block;
+}
+.good_list {
+	position: relative;
+	display: inline-block;
+	font-size: 0;
+	width: 1080px;
+	overflow: hidden;
+
+	margin-top: 13px;
+}
+.good_box {
+	display: inline-block;
+	float: left;
+	margin-right: 13px;
+}
+.good_list .good_box:last-child {
+	margin-right: 0;
+}
+
+.season_item {
+	position: relative;
+	width: 100%;
+	background: url('../image/footerBg.png');
+	background-repeat: repeat-x;
+	background-position: center top;
+	text-align: center;
+	background-size: cover;
+
+	padding-bottom: 45px;
+}
+.season_title {
+	display: inline-block;
+
+}
+.season_list {
+	position: relative;
+	display: inline-block;
+}
+.season_list > ul {
+	position: relative;
+}
+.season_list > ul > li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	min-width: 120px;
+}
+.tit {
+	display: inline-block;
+	font-size: 20px;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	padding: 5px 0;
+	width: 90%;
+
+	margin-bottom: 13px;
+}
+.season_submenu {
+	position: relative;
+}
+.season_submenu > li {
+	padding: 3px 0;
+}
+.season_submenu > li > a {
+	display: block;
+	color: #fff;
+	font-size: 15px;
+	font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+}
+.tt {
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: bold;
+}
+.tt:before {
+	content: ' ';
+}
+
+/*하단영역*/
+#footer {
+    position: relative;
+    width: 100%;
+    background: #f4f4f4;
+    padding-top: 120px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+
+    font-size: 13px;
+    color: #717171;
+    font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+#footer>ul {
+	position: relative;
+	margin-top: 15px;
+}
+#footer>ul>li {
+	margin-bottom: 5px;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
+
+/*오른쪽 고정 메뉴*/
+#fix_menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 100%;
+    background: #1f1f22;
+    z-index: 99999;
+    border-left: 1px solid #634e3e;
+
+    text-align: center;
+}
+
+#fix_menu > ul {
+	display: inline-block;
+	margin-top: 200px;
+}
+#fix_menu > ul > li {
+	margin-bottom: 3px;
+}
+#fix_menu > ul > li > a {
+	font-size: 11px;
+	color: #aeaaaa;
+	font-family: '돋움', sans-serif;
+	text-transform: uppercase;
+}
+.left_tit {
+	color: #fff;
+	font-family: 'Ropa Sans', 'Nanum Gothic', sans-serif;
+	font-weight: bold;
+
+	display: block;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #fff;
+}
+.gotop {
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	display: block;
+	width: 100%;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="images/mobile_web_icon.png"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Orakai SONDO PARK HOTEL</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!--[if lt IE 9]> 
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> 
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <!-- 주석 살려내야함 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <!-- swiper.js -->
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap_bg"></div>
+    <!-- 전체 레이아웃 -->
+    <div id="wrap">
+        <!-- 예약 영역 -->
+        <div id="book">
+            <div class="book_wrap animated fadeInUp">
+                <div class="book_left">
+                    <ul>
+                        <li>
+                            <span class="book_left_tit">check-in</span>
+                            <div class="book_left_num">
+                                <span><a href="#" class="selector flatpickr flatpickr-input">17</a></span>
+                                <div>
+                                    <span>November</span>
+                                    <span>2019</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="book_left_tit">check-out</span>
+                            <div class="book_left_num">
+                                <span><a href="#" class="selector flatpickr flatpickr-input">19</a></span>
+                                <div>
+                                    <span>November</span>
+                                    <span>2019</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="book_left_tit">adults</span>
+                            <div class="book_left_num">
+                                <span><a href="#">2</a></span>
+                                <div class="add_btn">
+                                    <a href="#">+</a>
+                                    <a href="#">-</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="book_left_tit">children</span>
+                            <div class="book_left_num">
+                                <span><a href="#">0</a></span>
+                                <div class="add_btn">
+                                    <a href="#">+</a>
+                                    <a href="#">-</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="book_right">
+                    <a href="#" onclick="alert('포트폴리오용 사이트입니다.')">
+                        <div>
+                            <span>reserve now</span>
+                            <span>→</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- book now -->
+        <div class="booknow animated slideInLeft">
+            <span>book now</span>
+        </div>
+        <!--// book now -->
+        <!--// 예약 영역 -->
+        <!-- 헤더영역 -->
+        <div id="header">
+            <div class="logo">
+                <a class="animated slideInDown" href="index.html"><img src="images/songdo_logo.svg"></a>
+            </div>
+            <div class="gnb">
+                <ul class="menu animated fadeInDown">
+                    <li><a class="abouthotel" href="index.html">about hotel</a>
+                        <ul class="submenu">
+                            <!-- aaa로 메뉴이동  -->
+                            <li class="aaa"><a href="index.html">our hotel</a></li>
+                            <!-- aaa로 메뉴이동  -->
+                            <li><a href="index.html">facilities</a></li>
+                            <li><a href="index.html">gallery</a></li>
+                            <li><a href="index.html">membership</a></li>
+                            <li><a href="index.html">location</a></li>
+                            <li><a href="index.html">mearby</a></li>
+                            <li><a href="index.html">news</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rooms.html">rooms</a>
+                        <ul class="submenu">
+                            <!-- bbb로 메뉴이동  -->
+                            <li class="bbb"><a href="rooms.html">deluxe</a></li>
+                            <!-- bbb로 메뉴이동  -->
+                            <li><a href="rooms.html">superior</a></li>
+                            <li><a href="rooms.html">premier deluxe</a></li>
+                            <li><a href="rooms.html">suites</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rooms.html">restaurant</a>
+                        <ul class="submenu">
+                            <li><a href="rooms.html">illy caffee</a></li>
+                            <li><a href="rooms.html">level 19</a></li>
+                            <li><a href="rooms.html">thirsty monk</a></li>
+                            <li><a href="rooms.html">emart24</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rooms.html">banquet</a>
+                        <ul class="submenu">
+                            <li><a href="rooms.html">introduction</a></li>
+                            <li><a href="rooms.html">lily</a></li>
+                            <li><a href="rooms.html">rose</a></li>
+                            <li><a href="rooms.html">board room</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rooms.html">events</a>
+                        <ul class="submenu">
+                            <li><a href="rooms.html">first birthday</a></li>
+                            <li><a href="rooms.html">weddings</a></li>
+                            <li><a href="rooms.html">family party</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rooms.html">special offers</a>
+                        <ul class="submenu">
+                            <li><a href="rooms.html">package</a></li>
+                            <li><a href="rooms.html">dinig promotion</a></li>
+                            <li><a href="rooms.html">meeting & event</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="language animated slideInRight">
+                <span>KO</span>
+                <span>EN</span>
+                <span>CN</span>
+            </div>
+        </div>
+        <!--// 헤더영역 -->
+        <!-- 메인 1 -->
+        <div class="page">
+            <div class="main_1 main_tit animated fadeInUp">
+                <span>A Luxury</span>
+                <span>Journey</span>
+                <span>The special things in moment.<br><br>
+                    마우스 스크롤을 돌려주세요.
+                </span>
+            </div>
+        </div>
+        <!--// 메인 1 -->
+        <!-- 메인 2 -->
+        <div id="page2" class="page">
+            <div class="main_2">
+                <div class="main_2_left">
+                    <div class="main_2_txtbox">
+                        <h2 class="main_2_tit">Our Hotel</h2>
+                        <div class="main_2_con">
+                            <p><span>오라카이 송도파크호텔</span>은</p>
+                            <p>특급호텔에 걸맞은 다양한 시설과 </p>
+                            <p>객실용품, 또한 품격 있는 서비스를 갖추고 있습니다.</p>
+                            <br>
+                            <p>이 곳에 머무는 동안 고객님은 마치 맨하튼의 센트럴파크를</p>
+                            <p>연상시키는 한 폭의 그림과 같은 송도센트럴파크를 도보로 방문하거나,</p>
+                            <p>한눈에 펼쳐진 평화로운 전망을 즐길 수 있습니다.</p>
+                            <br>
+                            <p>자연의 미를 갖춘 공원 내에서는 1.8 Km에 달하는</p>
+                            <p>해수로를 따라 잠시 휴식을 취하거나 산보를 하면서 아름다운 경치를 즐길 수도 있고, </p>
+                            <p>수로를 따라 운행하는 작은 배를 타는 여유도 가질 수도 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="more_view">
+                        <a href="rooms.html">자세히 보기 +</a>
+                    </div>
+                </div>
+                <div class="main_2_right">
+                    <img src="images/gallery_Img02.jpg">
+                </div>
+            </div>
+        </div>
+        <!--// 메인 2 -->
+     
+        <!-- 메인 bg 영역 -->
+        <!-- 클래스에 넣기 animated slideInLeft -->
+        <div class="main_bg">
+        </div>
+        <!--// 메인 bg 영역 -->
+        <div class="slide_btn animated slideInLeft">
+            <a href="#">
+                <span>more view</span>
+            </a>
+        </div>
+        <!-- 슬라이드 영역 -->
+        <div id="slide_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="close_btn">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="slide_logo">
+                    <img src="images/songdo_logo.svg">
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img01.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img02.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img03.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img04.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img05.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img06.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img07.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img15.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img16.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img18.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img22.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img23.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img24.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(./images/slide/gallery_Img27.jpg)"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inital-scale=1, minmum-scale=1, maximum-scale=1, user-scable=no">
+    <title>승차권 예약/발매 - SR</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css"><!-- bxslider -->
+    <!--[if lt IE 9]> 
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> 
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <!-- 주석 살려내야함 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script> <!-- bxslider -->
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="modal">
+        <div class="modal_con">
+            <img src="images/calendar.jpg" alt="캘린더">
+            <div class="modal_close"></div>
+        </div>
+    </div>
+    <div class="m_bg"></div>
+    <div id="wrap">
+        <div class="header">
+            <div class="header_top">
+                <div class="container">
+                    <div class="login_wrap">
+                        <ul class="login_box">
+                            <li><a href="index.html"><img src="images/ico_loc_home_top.png" alt="홈"></a></li>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li><a href="#"><strong>회사소개</strong></a></li>
+                            <li id="language"><a href="#"><span class="lang_title">Language</span><span class="language_btn"></span></a>
+                                <ul class="language">
+                                    <li><a href="#" lang-data="Language">Language</a></li>
+                                    <li><a href="#" lang-data="한국어">
+                                            <div class="flag"><img src="images/ico_flag_kr.png" alt="한국 국기"></div>
+                                            한국어
+                                        </a></li>
+                                    <li><a href="#" lang-data="English">
+                                            <div class="flag"><img src="images/ico_flag_en.png" alt="영국 국기"></div>
+                                            English
+                                        </a></li>
+                                    <li><a href="#" lang-data="中文(简)">
+                                            <div class="flag"><img src="images/ico_flag_cn.png" alt="중국 국기"></div>
+                                            中文(简)
+                                        </a></li>
+                                    <li><a href="#" lang-data="中文(繁)">
+                                            <div class="flag"><img src="images/ico_flag_cn.png" alt="중국 국기"></div>
+                                            中文(繁)
+                                        </a></li>
+                                    <li><a href="#" lang-data="日本語">
+                                            <div class="flag"><img src="images/ico_flag_ja.png" alt="일본 국기"></div>
+                                            日本語
+                                        </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="m_gnb">
+                        <ul class="m_menu">
+                            <div class="m_menu_tit">전 체 메 뉴
+                                <div class="m_menu_close">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <li><a href="#">승차권</a>
+                                <ul class="m_submenu">
+                                    <li><a href="#">승차권예약</a></li>
+                                    <li><a href="#" class="font_s">단체승차권</a></li>
+                                    <li><a href="#" class="font_s">할인승차권</a></li>
+                                    <li><a href="#">발권·취소·변경</a></li>
+                                    <li><a href="#" class="font_s">발권/취소</a></li>
+                                    <li><a href="#" class="font_s">예약변경</a></li>
+                                    <li><a href="#" class="font_s">이용내역/영수증</a></li>
+                                    <li><a href="#" class="font_s">인터넷 환불접수</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객안내</a>
+                                <ul class="m_submenu">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">자주찾는질문(FAQ)</a></li>
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">SR 고객센터</a></li>
+                                    <li><a href="#">유실물안내</a></li>
+                                    <li><a href="#">고객서비스헌장</a></li>
+                                    <li><a href="#">기업민원보호헌장</a></li>
+                                    <li><a href="#">여객운송약관</a></li>
+                                    <li><a href="#">안내사항</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">이용안내</a>
+                                <ul class="m_submenu">
+                                    <li><a href="#">종합이용안내</a></li>
+                                    <li><a href="#">승차권이용안내</a></li>
+                                    <li><a href="#">정차역이용안내</a></li>
+                                    <li><a href="#">운행구간</a></li>
+                                    <li><a href="#">부대사업안내</a></li>
+                                    <li><a href="#">지연배상신청</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">회원서비스</a>
+                                <ul class="m_submenu">
+                                    <li><a href="#">회원제도소개</a></li>
+                                    <li><a href="#">자가발권이용실적</a></li>
+                                    <li><a href="#">회원가입신청</a></li>
+                                    <li><a href="#">회원탈퇴안내</a></li>
+                                    <li><a href="#">미등록고객 예매</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 예약·발권</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 환불</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 재발권</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 이용안내</a></li>
+                                    <li><a href="#">공공할인 이용신청</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">여행상품</a>
+                                <ul class="m_submenu">
+                                    <li><a href="#">SRT BEST 여행상품</a></li>
+                                    <li><a href="#">지역별 여행상품</a></li>
+                                    <li><a href="#">당일 여행상품</a></li>
+                                    <li><a href="#">1박2일 여행상품</a></li>
+                                    <li><a href="#">2박3일 여행상품</a></li>
+                                    <li><a href="#">가을여행 특별관</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="container">
+                    <div class="logo"><a href="index.html"><img src="images/logo-e.png" alt="SRT"></a></div>
+                    <div class="login" onclick="alert('로그인 하세요.')"></div>
+                    <div class="burger"></div>
+                    
+                    <div class="gnb">
+                        <ul class="menu">
+                            <li><a href="#">승차권</a>
+                                <ul class="submenu">
+                                    <li><a href="#">승차권예약</a></li>
+                                    <li><a href="#" class="font_s">단체승차권</a></li>
+                                    <li><a href="#" class="font_s">할인승차권</a></li>
+                                    <li><a href="#">발권·취소·변경</a></li>
+                                    <li><a href="#" class="font_s">발권/취소</a></li>
+                                    <li><a href="#" class="font_s">예약변경</a></li>
+                                    <li><a href="#" class="font_s">이용내역/영수증</a></li>
+                                    <li><a href="#" class="font_s">인터넷 환불접수</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객안내</a>
+                                <ul class="submenu">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">자주찾는질문(FAQ)</a></li>
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">SR 고객센터</a></li>
+                                    <li><a href="#">유실물안내</a></li>
+                                    <li><a href="#">고객서비스헌장</a></li>
+                                    <li><a href="#">기업민원보호헌장</a></li>
+                                    <li><a href="#">여객운송약관</a></li>
+                                    <li><a href="#">안내사항</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">이용안내</a>
+                                <ul class="submenu">
+                                    <li><a href="#">종합이용안내</a></li>
+                                    <li><a href="#">승차권이용안내</a></li>
+                                    <li><a href="#">정차역이용안내</a></li>
+                                    <li><a href="#">운행구간</a></li>
+                                    <li><a href="#">부대사업안내</a></li>
+                                    <li><a href="#">지연배상신청</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">회원서비스</a>
+                                <ul class="submenu">
+                                    <li><a href="#">회원제도소개</a></li>
+                                    <li><a href="#">자가발권이용실적</a></li>
+                                    <li><a href="#">회원가입신청</a></li>
+                                    <li><a href="#">회원탈퇴안내</a></li>
+                                    <li><a href="#">미등록고객 예매</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 예약·발권</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 환불</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 재발권</a></li>
+                                    <li><a href="#" class="font_s">미등록고객 이용안내</a></li>
+                                    <li><a href="#">공공할인 이용신청</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">여행상품</a>
+                                <ul class="submenu">
+                                    <li><a href="#">SRT BEST 여행상품</a></li>
+                                    <li><a href="#">지역별 여행상품</a></li>
+                                    <li><a href="#">당일 여행상품</a></li>
+                                    <li><a href="#">1박2일 여행상품</a></li>
+                                    <li><a href="#">2박3일 여행상품</a></li>
+                                    <li><a href="#">가을여행 특별관</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnb_bg"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <!-- 메인 문구 -->
+                <div class="main_txt">
+                    <img src="images/txt-e_main1.png" alt="메인 문구">
+                </div>
+                <!-- 콘텐츠 왼쪽 / 오른쪽 -->
+                <div class="content_box clearfix">
+                    <div class="con_left">
+                        <div class="reserve">
+                            <select class="start_location">
+                                <option>출발역</option>
+                                <option>수서</option>
+                                <option>동탄</option>
+                                <option>지제</option>
+                                <option>천안아산</option>
+                                <option>오송</option>
+                                <option>대전</option>
+                                <option>김천(구미)</option>
+                                <option>동대구</option>
+                                <option>신경주</option>
+                                <option>울산(통도사)</option>
+                                <option>부산</option>
+                            </select>
+                            <select class="end_location">
+                                <option>도착역</option>
+                                <option>수서</option>
+                                <option>동탄</option>
+                                <option>지제</option>
+                                <option>천안아산</option>
+                                <option>오송</option>
+                                <option>대전</option>
+                                <option>김천(구미)</option>
+                                <option>동대구</option>
+                                <option>신경주</option>
+                                <option>울산(통도사)</option>
+                                <option>부산</option>
+                            </select>
+                            <select class="day">
+                                <option>2019.12.17</option>
+                            </select>
+                            <select class="time">
+                                <option>00시 이후</option>
+                                <option>02시 이후</option>
+                                <option>04시 이후</option>
+                                <option>06시 이후</option>
+                                <option>08시 이후</option>
+                                <option>10시 이후</option>
+                                <option>12시 이후</option>
+                                <option>14시 이후</option>
+                                <option>16시 이후</option>
+                                <option>18시 이후</option>
+                                <option>20시 이후</option>
+                                <option>22시 이후</option>
+                            </select>
+                            <select class="adult">
+                                <option>어른(만 13세 이상) 1명</option>
+                                <option>어른(만 13세 이상) 2명</option>
+                                <option>어른(만 13세 이상) 3명</option>
+                                <option>어른(만 13세 이상) 4명</option>
+                                <option>어른(만 13세 이상) 5명</option>
+                                <option>어른(만 13세 이상) 6명</option>
+                                <option>어른(만 13세 이상) 7명</option>
+                                <option>어른(만 13세 이상) 8명</option>
+                                <option>어른(만 13세 이상) 9명</option>
+                            </select>
+                            <select class="child">
+                                <option>어린이(만 6~ 12세) 0명</option>
+                                <option>어린이(만 6~ 12세) 1명</option>
+                                <option>어린이(만 6~ 12세) 2명</option>
+                                <option>어린이(만 6~ 12세) 3명</option>
+                                <option>어린이(만 6~ 12세) 4명</option>
+                                <option>어린이(만 6~ 12세) 5명</option>
+                                <option>어린이(만 6~ 12세) 6명</option>
+                                <option>어린이(만 6~ 12세) 7명</option>
+                                <option>어린이(만 6~ 12세) 8명</option>
+                                <option>어린이(만 6~ 12세) 9명</option>
+                            </select>
+                            <button type="button" onclick="alert('출발역을 선택하여 주십시요.')">
+                                <img src="images/ico_srch2.png" alt="검색">
+                                <span>간편조회하기</span>
+                            </button>
+                        </div>
+                        <div class="quick">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/ico-e_q1_on.png">
+                                        <span>예매내역·환불</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/ico-e_q2.png">
+                                        <span>열차운임·시간표</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/ico-e_q3.png">
+                                        <span>고객센터</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/ico-e_q4.png">
+                                        <span>유실물센터</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice">
+                            <div class="notice_tit">공지사항</div>
+                            <div class="notice_plus"><a href="#">+ 더보기</a></div>
+                            <ul class="notice_con">
+                                <li>
+                                    <a href="#">대국민 상상 철도 플랫폼 아이디어 공모전 합격자 결과 안내</a>
+                                    <span>2019-12-12</span>
+                                </li>
+                                <li>
+                                    <a href="#">모바일웹 기반 승차권 예매 플랫폼 서비스명 설문 조사 당첨자 명단</a>
+                                    <span>2019-12-06</span>
+                                </li>
+                                <li>
+                                    <a href="#">SRT 개통3주년 이벤트</a>
+                                    <span>2019-12-03</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="con_right">
+                        <div class="slide_box">
+                            <ul class="slider">
+                                <li><a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지"></a></li>
+                                <li><a href="#"><img src="images/slide2.png" alt="슬라이드 이미지"></a></li>
+                                <li><a href="#"><img src="images/slide3.png" alt="슬라이드 이미지"></a></li>
+                                <li><a href="#"><img src="images/slide4.png" alt="슬라이드 이미지"></a></li>
+                            </ul>
+                        </div>
+                        <div class="banner_box clearfix">
+                            <a href="#"><img src="images/banner1.png" alt="배너"></a>
+                            <a href="#"><img src="images/banner2.png" alt="배너"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 마우스 스크롤 -->
+                <div class="scroll">
+                    <img src="images/ico-e_scroll.png" alt="마우스 스크롤">
+                </div>
+                <!-- 베스트 여행상품 -->
+                <div class="best">
+                    <div class="best_title"><img src="images/txt-e_main2.png"></div>
+                    <div class="best_top">
+                        <div class="best_left">
+                            <ul class="best_list">
+                                <li>
+                                    <a href="#"><img src="images/tour1.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">부산ㆍCity Tour 1탄</strong>
+                                        <p class="b_sub">부산의 멋과 낭만이 가득한 당일 여행</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/tour2.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">부산 명소탐방여행(1박2일)</strong>
+                                        <p class="b_sub">부산의 명소들만 뽑아 알차게 즐길수 있는 1박2일 상품 입니다</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best_right">
+                            <ul class="best_list">
+                                <li>
+                                    <a href="#"><img src="images/tour3.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">남도탐방 1박2일</strong>
+                                        <p class="b_sub">남도(여수,순천,장흥,강진)의 멋과 맛의 향연</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/tour4.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">고품격 부산시티투어</strong>
+                                        <p class="b_sub">SRT 타고 품격있게 즐기다!</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="best_bottom">
+                        <div class="best_left">
+                            <ul class="best_list">
+                                <li>
+                                    <a href="#"><img src="images/tour5.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">SRT와 함께 가을여행</strong>
+                                        <p class="b_sub">전국 방방곡곡! 기차여행</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/tour6.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">옥션에서 검색하세요. 티랩 srt</strong>
+                                        <p class="b_sub">전국 방방곡곡! 기차여행</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best_right">
+                            <ul class="best_list">
+                                <li>
+                                    <a href="#"><img src="images/tour7.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">[SRT] 서남해의 보석, 홍도/흑산</strong>
+                                        <p class="b_sub">누구나 한번쯤 꿈꾸는 섬 여행!</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/tour8.jpg"></a>
+                                    <span class="best_text">
+                                        <strong class="b_tit">[SRT]덕유산 눈꽃 곤도라</strong>
+                                        <p class="b_sub">설명 문구 : SRT로 떠나는겨울 눈꽃여행~</p>
+                                    </span>
+                                    <span class="b_more"><a href="#">자세히보기<span class="more_p">+</span></a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="f_t_left">
+                        <ul class="footer_menu">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">고객서비스헌장</a></li>
+                            <li><a href="#">여객운송약관/부속약관</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_t_right">
+                        <select id="family_site">
+                            <option value="" class="stxt_1">유관기관 바로가기</option>
+                            <option value="http:///www.molit.go.kr/" class="stxt_2">국토교통부</option>
+                        </select>
+                        <span class="sbt">이동</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="f_b_left">
+                        <div class="footer_logo"><img src="images/f_logo.png"></div>
+                        <div class="footer_copy">
+                            <p>
+                                상호: 주식회사 에스알 ㅣ 사업자등록: 305-86-31590 <span class="remove">ㅣ</span> <span class="enter"></span>통신판매업신고: 2016-서울강남-03705호<br>
+                                (우: 06349) 서울특별시 강남구 광평로 281 수서효성빌딩 <span class="enter"></span>TEL 1800-1472 l FAX) 6484-4093<br>
+                                COPYRIGHT(C) 2018 SR CO., LTD. ALL RIGHTS RESERVED.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="f_b_right">
+                        <span><a href="#"><img src="images/ic_f_brand.png"></a></span>
+                        <span><a href="#"><img src="images/ic_f_highest.png"></a></span>
+                        <span><a href="#"><img src="images/ic_f_icsi.png"></a></span>
+                        <span><a href="#"><img src="images/ic_f_wa.png"></a></span>
+                        <span><a href="#"><img src="images/ismsp_footer.png"></a></span>
+                        <span><a href="#"><img src="images/ic_sys_purvey.png"></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

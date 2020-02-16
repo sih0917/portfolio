@@ -1,0 +1,389 @@
+@charset : "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+/* SCROLL */
+::-webkit-scrollbar { width: 10px; }
+/* 스크롤바의 width */
+::-webkit-scrollbar-track { background-color: #333; }
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb { 
+    background: #999; 
+}
+/* 스크롤바 색 */
+::-webkit-scrollbar-button { display: none; }
+/* 위 아래 버튼 (버튼 없애기를 함) */
+
+/*전체레이아웃*/
+#wrap {
+    position: relative;
+    width: 100%;
+ 	height: 100%;
+}
+
+#header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 117px;
+    background: url('../images/bg_topnav_2017.png') no-repeat,
+    url('../images/bg_topnav_repeat.png') repeat-x;
+	z-index: 99999;
+}
+.logo {
+	position: relative;
+	float: left;
+	margin-left: 35px;
+}
+.gnb {
+	position: relative;
+	float: left;
+	margin-left: 50px;
+	margin-top: 43px;
+}
+.mainmenu {
+	position: relative;
+	display: inline-block;
+}
+.mainmenu > li {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+.mainmenu > li > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -9999px;
+}
+.mainmenu > li:nth-child(1) {
+	width: 91px;
+	height: 45px;
+	background: url('../images/topnav_history.png') no-repeat;
+	background-position: 0px 0px;
+}
+
+.mainmenu > li:nth-child(2) {
+	width: 151px;
+	height: 45px;
+	background: url('../images/topnav_foundations.png') no-repeat;
+	background-position: 0px 0px;
+}
+.mainmenu > li:nth-child(3) {
+	width: 131px;
+	height: 45px;
+	background: url('../images/topnav_downloads.png') no-repeat;
+	background-position: 0px 0px;
+}
+.mainmenu > li:nth-child(4) {
+	width: 131px;
+	height: 45px;
+	background: url('../images/topnav_contactus.png') no-repeat;
+	background-position: 0px 0px;
+}
+.mainmenu > li:nth-child(1):hover,
+.mainmenu > li:nth-child(2):hover,
+.mainmenu > li:nth-child(3):hover,
+.mainmenu > li:nth-child(4):hover {
+	background-position: 0px -45px;
+}
+.search {
+	position: relative;
+	float: right;
+	margin-right: 45px;
+	margin-top: 45px;
+}
+#sbt {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45px;
+	height: 35px;
+	background: url('../images/search_go.png') no-repeat;
+	background-position: 0px 0px;
+	text-indent: -9999px;
+	border: none;
+	cursor: pointer;
+}
+#sbt:hover {
+	background-position: 0px -35px;
+}
+
+#stxt {
+	position: absolute;
+	right: 52px;
+	top: 1px;
+	background: url('../images/bg_search_textbox_white.jpg') no-repeat;
+	width: 136px;
+	height: 29px;
+	line-height: 29px;
+	border: none;
+	padding: 0px 8px;
+	color: #999;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.search input:focus {
+	outline-style: none;
+}
+
+/*메인영역*/
+#main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url('../images/home_Frisco.jpg') no-repeat;
+	background-position: top 95px center;
+	background-size: contain;
+}
+#view_shop {
+	position: absolute;
+	right: 40px;
+	top: 130px;
+	width: 224px;
+}
+
+.shop_info_top {
+	position: relative;
+	display: block;
+	width: 100%;
+	float: left;
+}
+.shop_info_txt {
+	position: relative;
+	display: block;
+	width: 100%;
+	float: left;
+	color: #fff;
+	font-size: 14px;
+	font-family:  Verdana, Helvetica, sans-serif;
+	line-height: 20px;
+	text-indent: 25px;
+	text-transform: uppercase;
+	background: url('../images/currentlyviewing_bg.png') repeat-y;
+
+}
+.shop_info_top img {
+	vertical-align: top;
+}
+
+.title {
+	cursor: pointer;
+}
+.pyo {
+	position: absolute;
+	right: 15px;
+	top: 5px;
+	width: 11px;
+	height: 7px;
+	border: none;
+
+	background: url('../images/currentlyviewing_arrow.png') no-repeat;
+	background-position: 0px -7px;
+	cursor: pointer;
+}
+.pyo:focus {
+	outline-style: none;
+}
+.show_list_wrap {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 190px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	padding: 10px 0;
+
+	float: left;
+	background: url('../images/currentlyviewing_bg.png') repeat-y;
+	
+	display: none;
+}
+.show_list {
+	position: relative;
+	display: block;
+}
+.show_list > li {
+	color: #fff;
+	font-size: 14px;
+	font-family:  Verdana, Helvetica, sans-serif;
+	line-height: 25px;
+	text-indent: 25px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.show_list > li:hover {
+	color: #f11e1e;
+}
+.show_list > li:active {
+	background: #ff0000;
+	color: #fff;
+}
+.select_list {
+	background: #ff0000 !important;
+	color: #fff !important;
+}
+
+.shop_info_bot {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	float: left;
+}
+.shop_info_bot img {
+	vertical-align: top;
+}
+
+.category_wrap {
+	position: absolute;
+	left: 0;
+	bottom: 153px;
+	width: 100%;
+	text-align: center;
+}
+.category {
+	position: relative;
+	display: inline-block;
+}
+.category > li {
+	display: inline-block;
+}
+.category a {
+	display: inline-block;
+	width: 239px;
+	height: 114px;
+	transition: all 0.2s;
+}
+.category img {
+	width: 100%;
+	
+}
+.category a:hover {
+	width: 290px;
+}
+
+/*하단영역*/
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 95px;
+}
+
+.footer_top {
+	position: relative;
+	width: 100%;	
+	height: 30px;
+	background: #bc0404;
+}
+.footer_top > ul {
+	position: relative;
+	display: inline-block;
+	margin-left: 35px;
+}
+.footer_top > ul > li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	padding: 11px 0px;
+	margin-right: 20px;
+}
+.footer_top > ul > li > a {
+	display: inline-block;
+	text-indent: -9999px;
+}
+.footer_top > ul > li:nth-child(1) a {
+	width: 66px;
+	height: 9px;
+	background: url('../images/bottomnav_giftcards.png') no-repeat;
+	background-position: 0px 0px;
+}
+.footer_top > ul > li:nth-child(2) a {
+	width: 91px;
+	height: 9px;
+	background: url('../images/bottomnav_nutrition.png') no-repeat;
+	background-position: 0px 0px;
+}
+.footer_top > ul > li:nth-child(3) a {
+	width: 105px;
+	height: 9px;
+	background: url('../images/bottomnav_cookout_trailer.png') no-repeat;
+	background-position: 0px 0px;
+}
+.footer_top > ul > li:hover a {
+	background-position: 0px -9px;
+}
+.footer_bot {
+	position: relative;
+	width: 100%;
+	height: 65px;
+	background: #fff;
+	padding-top: 11px;
+	padding-left: 35px;
+	padding-right: 45px;
+}
+.footer_left {
+	position: relative;
+	float: left;
+	font-size: 12px;
+	color: #7a7a7a;
+	font-family: Verdana, Helvetica, sans-serif;
+}
+.footer_left a {
+	display: inline-block;
+	text-indent: -9999px;
+	width: 22px;
+	height: 22px;
+	background: url('../images/fb_icon.png') no-repeat;
+	margin-left: 5px;
+	
+	vertical-align: middle;
+}
+.footer_right {
+	position: relative;
+	float: right;
+}
+.footer_right > ul {
+	position: relative;
+	display: inline-block;
+}
+.footer_right > ul > li {
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+}
+.footer_right > ul > li > a {
+	display: inline-block;
+	font-size: 10px;
+	color: #a71812;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+.footer_right > ul > li > a:hover {
+	text-decoration: underline;
+}
+
+
