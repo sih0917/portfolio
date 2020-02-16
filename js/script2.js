@@ -76,11 +76,8 @@ $(document).ready(function() {
             prevFour = 0;
           }
         }
-
         reSetPortLi();
-
       }
-
       mainPageSlide();
     });
   });
