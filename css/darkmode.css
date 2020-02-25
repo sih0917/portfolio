@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*dark mode*/
 html.dark .bg_click { color: #fff; }
 html.dark .bg_click:hover { color: #000; }
@@ -48,16 +47,20 @@ html.dark .copy span { color: #fff; }
 
 
 /*light mode*/
-html.light .bg_click { color: #000; }
-html.light .bg_click:hover { color: #fff; }
-html.light .bg_click:before { background: #000; }
+html.light .bg_click.one { color: #000; }
+html.light .bg_click.one:hover { color: #fff; }
+html.light .bg_click.one:before { background: #000; }
 
-html.light .mouse { border: 2px solid #000; }
-html.light .mouse span { background: #000; }
-html.light .mouse span::after { background: #000; }
+html.light .mouse { border: 2px solid #fff; }
+html.light .mouse span { background: #fff; }
+html.light .mouse span::after { background: #fff; }
+html.light .mouse.one { border: 2px solid #000; }
+html.light .mouse.one span { background: #000; }
+html.light .mouse.one span::after { background: #000; }
 
-html.light .gnb>li>a { color: #000; }
-html.light .section_tag { color: #333; }
+html.light .gnb>li>a { color: #fff; }
+html.light .gnb>li>a.one { color: #000; }
+html.light .section_tag.one { color: #333; }
 html.light section#about-me { background: #f0f0f0; }
 
 html.light .square span:nth-child(1),
@@ -96,16 +99,20 @@ html.light .copy span { color: #000; }
 
 
 @media (prefers-color-scheme: light) {
-	.bg_click { color: #000; }
-	.bg_click:hover { color: #fff; }
-	.bg_click:before { background: #000; }
+	.bg_click.one { color: #000; }
+	.bg_click.one:hover { color: #fff; }
+	.bg_click.one:before { background: #000; }
 
-	.mouse { border: 2px solid #000; }
-	.mouse span { background: #000; }
-	.mouse span::after { background: #000; }
+	.mouse { border: 2px solid #fff; }
+	.mouse span { background: #fff; }
+	.mouse span::after { background: #fff; }
+	.mouse.one { border: 2px solid #000; }
+	.mouse.one span { background: #000; }
+	.mouse.one span::after { background: #000; }
 
-    .gnb>li>a {	color: #000; }
-    .section_tag { color: #333; }
+    .gnb>li>a {	color: #fff; }
+    .gnb>li>a.one {	color: #000; }
+    .section_tag.one { color: #333; }
     section#about-me { background: #f0f0f0; }
 
     .square span:nth-child(1),
