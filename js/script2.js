@@ -1,11 +1,4 @@
 $(document).ready(function() {
-    // 새로고침시 배경화면 랜덤
-    /*window.onload = function() {
-      var number = Math.floor(Math.random() * 2)
-      if (number == 0) {
-        $('.sky, .moon, .people1, .people2, .people3, .people4, .txt').addClass('active');
-      }
-    }*/
     //---------------------------- 상단 주메뉴 클릭시 이동
     // PC 메뉴 목록 클릭시 천천히 슬라이딩
     var gnbA = $('.gnb a');
@@ -510,23 +503,6 @@ $(document).ready(function() {
         }
     }
 
-    //  ----------------------- 배경 버튼 클릭시 변경하기
-    /*var bg_click = $('.bg_click');
-    bg_click.click(function() {
-      $('.sky,.moon,.people1,.people2,.people3,.people4,.txt').toggleClass('active');
-      var bg_text = $('.bg_click').text();
-      if (bg_text == 'Dark') {
-      // dark 모드
-          bg_click.addClass('dark')
-          bg_click.text("Light");
-      } else {
-      // light 모드    
-          bg_click.removeClass('dark')
-          bg_click.text("Dark");
-      }
-    });*/
-
-
     //------------------------------ 물효과
     // 워크 텍스트 물 채워지는 코드
     $('.works_wrap').scroll(function() {
@@ -591,9 +567,7 @@ $(document).ready(function() {
     // 윈도우 리사이즈 시
     $(window).resize(function() {
         posY = $(document).height();
-        // mainPageSlide();
         posY = posY * pageIndex * -1;
-
         $('#main').stop().css({
             top: posY
         });
