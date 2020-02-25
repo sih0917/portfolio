@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="author" content="nino">
   <meta name="description" content="NINO's Portfolio">
@@ -13,16 +13,15 @@
   <title>NINO: Chrome에 최적화 되어있습니다 :)</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/darkmode.css">
   <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- prefixfree 주석 살려내야함 -->
-  <!-- <script src="js/prefixfree.min.js"></script> -->
-  <!-- <script src="js/TweenMax.min.js"></script> -->
   <script type="text/javascript" src="js/gnb.js"></script>
   <script type="text/javascript" src="js/script2.js"></script>
+  <script type="text/javascript" src="js/darkmode.js"></script>
 </head>
 <body>
   <!-- 위로가기 -->
@@ -82,13 +81,16 @@
       <div class="mouse mouse_prev">
         <span></span>
       </div>
-  </header>
+  </div>
+  <div class="bg_click" title="눌려보세요:)">
+        <span>Dark</span>
+   </div>
+</header>
   <!--// 헤더 -->
   <!-- 전체 레이아웃 -->
   <div id="wrap" class="swiper-container">
     <div id="main" class="swiper-wrapper">
       <!-- 별 배경 -->
-      <canvas id="canvas"></canvas>
       <section id="home" class="parallax_group swiper-slide">
         <span class="section_tag">home</span>
         <div class="parallax_layer sky"></div>
@@ -103,9 +105,7 @@
             <span class="txt2">Portfolio</span>
           </a>
         </div>
-        <div class="bg_click" title="눌려보세요:)">
-          <span>Click !</span>
-        </div>
+        
       </section>
       <section id="about-me">
         <span class="section_tag">about me</span>
@@ -157,7 +157,7 @@
           </div>
         </div>
         <div class="pf_name_circle">
-          <img src="images/circle.png" alt="달">
+          <img src="images/circle.png" alt="달 이미지">
         </div>
         <div class="pf_name">
           <ul>
@@ -231,7 +231,6 @@
   </div>
   <!-- 스크립트 -->
   <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/script_star.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       var agent = navigator.userAgent.toLowerCase();

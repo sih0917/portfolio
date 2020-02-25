@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/*dark mode*/
+html.dark .bg_click { color: #fff; }
+html.dark .bg_click:hover { color: #000; }
+html.dark .bg_click:before { background: #fff; }
+
+html.dark .mouse { border: 2px solid #fff; }
+html.dark .mouse span { background: #f0f0f0; }
+html.dark .mouse span::after { background: #f0f0f0; }
+
+html.dark .gnb>li>a { color: #fff; }
+html.dark .section_tag { color: #fff; }
+html.dark section#about-me { background: #000; }
+
+html.dark .square span:nth-child(1),
+html.dark .square span:nth-child(2),
+html.dark .square span:nth-child(3) { border: 2px solid #fff; }
+html.dark .square .about_content a:hover { color: #333; background: #fff }
+html.dark .square:hover span { border: none;}
+html.dark .square .about_content a { border: 2px solid #fff; }
+
+html.dark .about_content h2,
+html.dark .about_content p,
+html.dark .about_content a { color: #fff; }
+
+html.dark section#portfolio {
+  background: linear-gradient(#000000, #070601, #0b1c39, #57548b, #ddb97d, #b2e6fe, #5dd9f8);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: 100% 5400px;
+  transition: background 1s;
+}
+html.dark .pf_title { color: #fff;}
+html.dark .pf_name li { color: #fff; }
+html.dark .pf_name li.on { color: #ffda00; }
+
+html.dark section#works{ background: linear-gradient(#5dd9f8, #0b1c39); }
+	
+html.dark section#contact { background: #000;}
+html.dark .big_txt2 { color: #fff; }
+html.dark .big_txt2_box:hover .txt_on { color: #ffda00 }
+html.dark .qrcode div { color: #000; }
+html.dark .qrcode::after {color: #fff;}
+
+html.dark .footer_box { border-top: 2px solid #fff; }
+html.dark .copy span { color: #fff; }
+
+
+/*light mode*/
+html.light .bg_click { color: #000; }
+html.light .bg_click:hover { color: #fff; }
+html.light .bg_click:before { background: #000; }
+
+html.light .mouse { border: 2px solid #000; }
+html.light .mouse span { background: #000; }
+html.light .mouse span::after { background: #000; }
+
+html.light .gnb>li>a { color: #000; }
+html.light .section_tag { color: #333; }
+html.light section#about-me { background: #f0f0f0; }
+
+html.light .square span:nth-child(1),
+html.light .square span:nth-child(2),
+html.light .square span:nth-child(3) { border: 2px solid #333; }
+html.light .square:hover span { border: none;}
+
+html.light .about_content h2,
+html.light .about_content p,
+html.light .about_content a { color: #333; }
+html.light .about_content a { border: 2px solid #333; }
+
+html.light .square:hover .about_content a { border: 2px solid #fff; }
+html.light .square:hover .about_content h2,
+html.light .square:hover .about_content p,
+html.light .square:hover .about_content a { color: #fff; }
+html.light .square .about_content a:hover { color: #333; }
+
+html.light section#portfolio{ background: #f0f0f0;}
+html.light .pf_title { color: #333;}
+html.light .pf_name li { color: #333; }
+html.light .pf_name li.on { color: #333; }
+
+html.light section#works{ background: #5dd9f8; }
+	
+html.light section#contact { background: #fff;}
+html.light .big_txt2 { color: #000; }
+html.light .big_txt2_box:hover .txt_on { color: #0000ff }
+html.light .qrcode div { color: #fff; }
+html.light .qrcode::after {color: #000;}
+html.light .qrcode:hover div { color: #000; }
+
+html.light .footer_box { border-top: 2px solid #333; }
+html.light .copy span { color: #000; }
+
+
+
+@media (prefers-color-scheme: light) {
+	.bg_click { color: #000; }
+	.bg_click:hover { color: #fff; }
+	.bg_click:before { background: #000; }
+
+	.mouse { border: 2px solid #000; }
+	.mouse span { background: #000; }
+	.mouse span::after { background: #000; }
+
+    .gnb>li>a {	color: #000; }
+    .section_tag { color: #333; }
+    section#about-me { background: #f0f0f0; }
+
+    .square span:nth-child(1),
+    .square span:nth-child(2),
+    .square span:nth-child(3) { border: 2px solid #333; }
+
+    .about_content h2,
+    .about_content p,
+    .about_content a { color: #333; }
+    .about_content a {  border: 2px solid #333; }
+
+    .square:hover .about_content h2,
+    .square:hover .about_content p,
+    .square:hover .about_content a { color: #fff;}
+    .square:hover .about_content a { border: 2px solid #fff; }
+	.square .about_content a:hover { color: #333; }
+    
+    section#portfolio{ background: #f0f0f0;}
+    .pf_title { color: #333;}
+    .pf_name li { color: #333; }
+    .pf_name li.on { color: #333; }
+
+    section#works{ background: #5dd9f8; }
+	
+	section#contact { background: #fff;}
+	.big_txt2 { color: #000; }
+	.big_txt2_box:hover .txt_on { color: #0000ff }
+	.qrcode::after {color: #000;}
+	.qrcode div { color: #fff; }
+	.qrcode:hover div { color: #000; }
+
+	.footer_box { border-top: 2px solid #333; }
+	.copy span { color: #000; }
+}
+

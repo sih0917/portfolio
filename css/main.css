@@ -535,15 +535,18 @@ canvas {
 }
 
 .bg_click {
-  position: absolute;
-  right: 5%;
-  bottom: 10%;
+  position: fixed;
+  right: 4vw;
+  bottom: 6vh;
   z-index: 9;
   color: #fff;
   font-size: 24px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.4s;
+}
+.bg_click:hover {
+    color: #000;
 }
 
 .bg_click:before {
@@ -556,7 +559,7 @@ canvas {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background: #fff;
   opacity: 0;
 }
 
@@ -579,7 +582,9 @@ section#about-me {
   transform: translate(-50%, -50%);
   transition: all 1s;
 }
-
+.square > span {
+    font-size: 0;
+}
 .square span:nth-child(1) {
   position: absolute;
   left: 0;
@@ -928,12 +933,13 @@ section#works {
 
 /* 스크롤바 색 */
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: rgba(0,0,0,.1);
 }
 
 /* 스크롤바의 전체 배경색 */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #1697bf, #62b7ac);
+  background: #fafafa;
+  border-radius: 10px;
 }
 
 /* 위 아래 버튼 (버튼 없애기를 함) */
