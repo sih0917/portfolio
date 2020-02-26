@@ -1,55 +1,47 @@
 @charset "utf-8";
-/*dark mode*/
-html.dark .bg_click { color: #fff; }
-html.dark .bg_click:hover { color: #000; }
-html.dark .bg_click:before { background: #fff; }
+/*토글 버튼*/
 
-html.dark .mouse { border: 2px solid #fff; }
-html.dark .mouse span { background: #f0f0f0; }
-html.dark .mouse span::after { background: #f0f0f0; }
-
-html.dark .gnb>li>a { color: #fff; }
-html.dark .section_tag { color: #fff; }
-html.dark section#about-me { background: #000; }
-
-html.dark .square span:nth-child(1),
-html.dark .square span:nth-child(2),
-html.dark .square span:nth-child(3) { border: 2px solid #fff; }
-html.dark .square .about_content a:hover { color: #333; background: #fff }
-html.dark .square:hover span { border: none;}
-html.dark .square .about_content a { border: 2px solid #fff; }
-
-html.dark .about_content h2,
-html.dark .about_content p,
-html.dark .about_content a { color: #fff; }
-
-html.dark section#portfolio {
-  background: linear-gradient(#000000, #070601, #0b1c39, #57548b, #ddb97d, #b2e6fe, #5dd9f8);
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-size: 100% 5400px;
-  transition: background 1s;
+.toggle_dark {
+	position: fixed;
+	right: 6vw;
+	bottom: 20px;
+	width: 48px;
+	height: 23px;
+	background: #DEE2E6;
+	border: none;
+	border-radius: 20px;
+	font-size: 0;
+	cursor: pointer;
+	outline: none;
 }
-html.dark .pf_title { color: #fff;}
-html.dark .pf_name li { color: #fff; }
-html.dark .pf_name li.on { color: #ffda00; }
-
-html.dark section#works{ background: linear-gradient(#5dd9f8, #0b1c39); }
-	
-html.dark section#contact { background: #000;}
-html.dark .big_txt2 { color: #fff; }
-html.dark .big_txt2_box:hover .txt_on { color: #ffda00 }
-html.dark .qrcode div { color: #000; }
-html.dark .qrcode::after {color: #fff;}
-
-html.dark .footer_box { border-top: 2px solid #fff; }
-html.dark .copy span { color: #fff; }
+.toggle_dark > svg { margin: 0 4px; }
+.toggle_dark .darkmode_dot {
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	width: 19px;
+	height: 19px;
+	border-radius: 50%;
+	background: #B6BFC8;
+	transition: left .2s;
+}
+.toggle_dark.on { background: #514c66; }
+.toggle_dark.on .darkmode_dot { left: 27px; background: #3a3649; }
 
 
 /*light mode*/
+html.light .gnb_m_btn.one > span { background: #000; }
+html.light .gnb_m_btn.one > span:nth-child(4),
+html.light .gnb_m_btn.one > span:nth-child(7),
+html.light .gnb_m_btn.one > span:nth-child(8) { background: none; }
+
+html.light .gnb_m_btn.one.open > span { background: #fff; }
+html.light .gnb_m_btn.one.open > span:nth-child(2),
+html.light .gnb_m_btn.one.open > span:nth-child(3),
+html.light .gnb_m_btn.one.open > span:nth-child(6) { background: none; }
+
 html.light .bg_click.one { color: #000; }
-html.light .bg_click.one:hover { color: #fff; }
-html.light .bg_click.one:before { background: #000; }
+html.light .bg_click.one:hover { color: #fff; background: #000; }
 
 html.light .mouse { border: 2px solid #fff; }
 html.light .mouse span { background: #fff; }
@@ -61,17 +53,16 @@ html.light .mouse.one span::after { background: #000; }
 html.light .gnb>li>a { color: #fff; }
 html.light .gnb>li>a.one { color: #000; }
 html.light .section_tag.one { color: #333; }
-html.light section#about-me { background: #f0f0f0; }
 
-html.light .square span:nth-child(1),
-html.light .square span:nth-child(2),
-html.light .square span:nth-child(3) { border: 2px solid #333; }
-html.light .square:hover span { border: none;}
+html.light section#about-me { background: #f4f7fb; }
 
-html.light .about_content h2,
-html.light .about_content p,
-html.light .about_content a { color: #333; }
-html.light .about_content a { border: 2px solid #333; }
+html.light .square > span { border: 2px solid #333; }
+html.light .square:hover > span { border: none; background: rgba(30, 150, 255, 0.8);}
+
+html.light .square .about_content h2,
+html.light .square .about_content p,
+html.light .square .about_content a { color: #333; }
+html.light .square .about_content a { border: 2px solid #333; }
 
 html.light .square:hover .about_content a { border: 2px solid #fff; }
 html.light .square:hover .about_content h2,
@@ -79,7 +70,8 @@ html.light .square:hover .about_content p,
 html.light .square:hover .about_content a { color: #fff; }
 html.light .square .about_content a:hover { color: #333; }
 
-html.light section#portfolio{ background: #f0f0f0;}
+html.light section#portfolio{ background: #f4f7fb;}
+
 html.light .pf_title { color: #333;}
 html.light .pf_name li { color: #333; }
 html.light .pf_name li.on { color: #333; }
@@ -93,58 +85,12 @@ html.light .qrcode div { color: #fff; }
 html.light .qrcode::after {color: #000;}
 html.light .qrcode:hover div { color: #000; }
 
-html.light .footer_box { border-top: 2px solid #333; }
-html.light .copy span { color: #000; }
+html.light .footer_box { border-top: 2px solid #000; }
+html.light .copy span { color: #333; }
 
+html.light .pointer.fade { opacity: 0; transition: opacity .5s }
 
-
-@media (prefers-color-scheme: light) {
-	.bg_click.one { color: #000; }
-	.bg_click.one:hover { color: #fff; }
-	.bg_click.one:before { background: #000; }
-
-	.mouse { border: 2px solid #fff; }
-	.mouse span { background: #fff; }
-	.mouse span::after { background: #fff; }
-	.mouse.one { border: 2px solid #000; }
-	.mouse.one span { background: #000; }
-	.mouse.one span::after { background: #000; }
-
-    .gnb>li>a {	color: #fff; }
-    .gnb>li>a.one {	color: #000; }
-    .section_tag.one { color: #333; }
-    section#about-me { background: #f0f0f0; }
-
-    .square span:nth-child(1),
-    .square span:nth-child(2),
-    .square span:nth-child(3) { border: 2px solid #333; }
-
-    .about_content h2,
-    .about_content p,
-    .about_content a { color: #333; }
-    .about_content a {  border: 2px solid #333; }
-
-    .square:hover .about_content h2,
-    .square:hover .about_content p,
-    .square:hover .about_content a { color: #fff;}
-    .square:hover .about_content a { border: 2px solid #fff; }
-	.square .about_content a:hover { color: #333; }
-    
-    section#portfolio{ background: #f0f0f0;}
-    .pf_title { color: #333;}
-    .pf_name li { color: #333; }
-    .pf_name li.on { color: #333; }
-
-    section#works{ background: #5dd9f8; }
-	
-	section#contact { background: #fff;}
-	.big_txt2 { color: #000; }
-	.big_txt2_box:hover .txt_on { color: #0000ff }
-	.qrcode::after {color: #000;}
-	.qrcode div { color: #fff; }
-	.qrcode:hover div { color: #000; }
-
-	.footer_box { border-top: 2px solid #333; }
-	.copy span { color: #000; }
-}
+/* js 필요없을 때 css에서 추가 */
+@media (prefers-color-scheme: light) {  }
+@media (prefers-color-scheme: dark) {  }
 

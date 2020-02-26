@@ -167,9 +167,9 @@ $(document).ready(function() {
             scrollDefence = false;
             // light mode 첫페이지 gnb color
             if (pageIndex == 0) {
-                $('.gnb>li>a, .mouse, .bg_click, .section_tag').removeClass('one');
+                $('.gnb>li>a, .mouse, .bg_click, .section_tag, .gnb_m_btn').removeClass('one');
             } else {
-                $('.gnb>li>a, .mouse, .bg_click, .section_tag').addClass('one');
+                $('.gnb>li>a, .mouse, .bg_click, .section_tag, .gnb_m_btn').addClass('one');
             }
             if (pageIndex == 2) {
                 portWheelCheck = true;
@@ -561,6 +561,12 @@ $(document).ready(function() {
         pointer.css({
             left: e.pageX,
             top: e.pageY
+        });
+        $('header').mouseenter(function(){
+            pointer.fadeOut();
+        });
+        $('header').mouseleave(function(){
+            pointer.fadeIn();
         });
     });
 

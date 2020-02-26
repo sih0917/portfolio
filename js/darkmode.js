@@ -1,74 +1,79 @@
 $(document).ready(function() {
-    // 버튼 클릭 시 다크모드
-    var bg_click = $('.bg_click');
 
-    bg_click.click(function() {
-        DarkChange();
+    var html = $('html');
+    var bg_click = $('.bg_click');
+    var homeBG = $('.sky, .moon, .people1, .people2, .people3, .people4, .txt');
+    var DarkOn = html.hasClass('light');
+    var qrcode = $('.qrcode');
+    var qrImg = $('.qrcode > img');
+    var pointer = $('.pointer');
+    var toggle_dark = $('.toggle_dark');
+    var darkmode_dot = $('.darkmode_dot');
+
+    // 토글 버튼 모션
+    toggle_dark.click(function(){
+    	DarkChange();
     });
 
-    function DarkChange() {
-        var bg_text = $('.bg_click').text();
-        if (bg_text == 'Dark') {
-            // dark 모드
-            $('.sky,.moon,.people1,.people2,.people3,.people4,.txt').removeClass('active');
-            bg_click.text("Light");
-            $('html').removeClass('light')
-            $('html').addClass('dark')
-            $('.qrcode > img').attr('src', "images/qrcode.png");
+    // 기기에서 다크모드 시
+    const darkModeMeidaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMeidaQuery.addListener(updateForDarkModeChange);
+    updateForDarkModeChange();
 
+
+    // function 모음
+    function DarkChange() {
+        DarkOn = $('html').hasClass('light');
+        if (DarkOn == true) {
+           toggle_dark.addClass('on');
+            darkMode();
         } else {
-            // light 모드  
-            $('.sky,.moon,.people1,.people2,.people3,.people4,.txt').addClass('active');  
-            bg_click.text("Dark");
-            $('html').addClass('light')
-            $('html').removeClass('dark')
-            $('.qrcode > img').attr('src', "images/qrcode_light.png");
+        	toggle_dark.removeClass('on');
+            lightMode();
+            QRMode();
         }
     }
-
-    // 기기에서 다크모드
-    const darkModeMeidaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     function updateForDarkModeChange() {
         if (darkModeMeidaQuery.matches) {
-            // 다크모드 on.
-            $('.sky, .moon, .people1, .people2, .people3, .people4, .txt').removeClass('active');
-            $('.bg_click').text('Light');
-            $('html').removeClass('light')
-            $('html').addClass('dark')
-            $('.qrcode > img').attr('src', "images/qrcode.png");
-
+        	toggle_dark.addClass('on');
+            darkMode();
         } else {
-            // 다크모드 off.
-            $('.sky, .moon, .people1, .people2, .people3, .people4, .txt').addClass('active');
-            $('.bg_click').text('Dark');
-            $('html').addClass('light')
-            $('html').removeClass('dark')
-            $('.qrcode > img').attr('src', "images/qrcode_light.png");
+        	toggle_dark.removeClass('on');
+            lightMode();
+            QRMode();
         }
-
-        // qr코드 light 일때
-            var qrBG = $('#contact').css('background-color');
-            
-            bg_click.click(function(){
-            	qrBG = $('#contact').css('background-color');
-            });
-           
-            $('.qrcode').mouseenter(function() {
-            	 if (qrBG == 'rgb(255, 255, 255)') {
-            	 	$('.qrcode > img').attr('src', "images/qrcode.png");
-               		$('.pointer').animate({ 'opacity': 0 });
-	            } 
-            });
-            $('.qrcode').mouseleave(function() {
-            	if (qrBG == 'rgb(255, 255, 255)') {
-            		$('.qrcode > img').attr('src', "images/qrcode_light.png");
-                	$('.pointer').animate({ 'opacity': 1 }, 500);
-            	} 
-            });
     }
 
-    darkModeMeidaQuery.addListener(updateForDarkModeChange);
-    updateForDarkModeChange();
+    function darkMode() {
+        //  dark 모드
+        bg_click.text('Dark');
+        html.removeClass('light')
+        homeBG.removeClass('active');
+        // qr모드 해제 시 필요한 부분
+        qrImg.attr('src', "images/qrcode.png");
+        qrcode.mouseleave(function() {
+            qrImg.attr('src', "images/qrcode.png");
+        });
+    }
+
+    function lightMode() {
+        // light 모드
+        bg_click.text('Light');
+        html.addClass('light')
+        homeBG.addClass('active');
+    }
+
+    function QRMode() {
+        qrImg.attr('src', "images/qrcode_light.png");
+        qrcode.mouseenter(function() {
+            qrImg.attr('src', "images/qrcode.png");
+            pointer.addClass('fade');
+        });
+        qrcode.mouseleave(function() {
+            qrImg.attr('src', "images/qrcode_light.png");
+            pointer.removeClass('fade');
+        });
+    }
 
 });
