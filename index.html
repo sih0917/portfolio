@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -28,11 +27,13 @@
     <!-- 헤더 -->
     <header id="header">
         <div class="container">
+            <!-- 로고 -->
             <div class="logo">
                 <a href="index.html">
                     <img src="images/logo_01.svg" alt="NINO logo" title="Nino의 포트폴리오 사이트 입니다.">
                 </a>
             </div>
+            <!-- 네비게이션 -->
             <nav>
                 <ul class="gnb">
                     <li><a href="#home">home
@@ -63,6 +64,7 @@
                     <span></span>
                 </div>
             </nav>
+            <!-- 모바일 네비게이션 -->
             <div class="gnb_m_box">
                 <ul class="gnb_m">
                     <li><a href="#home">home</a></li>
@@ -72,13 +74,15 @@
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </div>
-            <div class="mouse mouse_next">
-                <span></span>
-            </div>
-            <div class="mouse mouse_prev">
-                <span></span>
-            </div>
         </div>
+        <!-- 상하 이동 버튼 -->
+        <div class="mouse mouse_next">
+            <span></span>
+        </div>
+        <div class="mouse mouse_prev">
+            <span></span>
+        </div>
+        <!-- 다크모드 -->
         <button aria-label="Toggle Dark Mode" type="button" class="toggle_dark">
             <span class="css-hiuxy7">Toggle Dark Mode</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="css-u5imha">
@@ -100,10 +104,10 @@
     </header>
     <!--// 헤더 -->
     <!-- 전체 레이아웃 -->
-    <div id="wrap" class="swiper-container">
-        <div id="main" class="swiper-wrapper">
+    <div id="wrap">
+        <div id="main">
             <!-- 별 배경 -->
-            <section id="home" class="parallax_group swiper-slide">
+            <section id="home" class="parallax_group">
                 <span class="section_tag">home</span>
                 <div class="parallax_layer sky"></div>
                 <div class="parallax_layer moon"></div>
@@ -212,7 +216,6 @@
             <section id="contact">
                 <div class="pointer"></div>
                 <span class="section_tag">contact</span>
-                <!-- <div class="wave_bg"></div> -->
                 <div class="big_txt2_box">
                     <a href="mailto:sih0917@gmail.com" title="Contact me :: 클릭하시면 메일을 보내실 수 있습니다.">
                         <div class="big_txt2">sih</div>

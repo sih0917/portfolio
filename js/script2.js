@@ -196,7 +196,7 @@ $(document).ready(function() {
     // 몇번 회전할 것인가를 계산해야 한다.
     var rotateCount = 0;
     var scrollTimer;
-    var scrollTimerSpeed = 150;
+    var scrollTimerSpeed = 100;
     var scrollTimerSpeed_Now = scrollTimerSpeed;
 
     // 포트폴리오 li 클릭시 사진 및 내용 바꾸기 회전하기
@@ -295,12 +295,12 @@ $(document).ready(function() {
 
     // 포트폴리오 스크롤 함수
     function portScroll_Repeat() {
-        clearInterval(scrollTimer);
-        scrollTimer = setInterval(portScroll_Repeat_Timer, scrollTimerSpeed_Now);
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(portScroll_Repeat_Timer, scrollTimerSpeed_Now);
     }
 
     function portScroll_Repeat_Timer() {
-        clearInterval(scrollTimer);
+        clearTimeout(scrollTimer);
         if (rotateCount >= 0) {
             portScroll();
         }
@@ -462,13 +462,12 @@ $(document).ready(function() {
             $('.info > span').text(portDataArr[portShowIndex].desc);
             $('.portlink').attr('href', portDataArr[portShowIndex].workLink);
             $('.originlink').attr('href', portDataArr[portShowIndex].originLink);
-        }, 400);
+        }, 100);
     }
 
     // 클릭시에는 화면 이동 처리를 하지 말자.
     $.each(portShowLi, function(index, item) {
-        var tempTag = $(this);
-        tempTag.click(function() {
+        $(this).click(function() {
             if (portShowIndex < index) {
                 scrollDir = 'down';
                 // 몇번 회전할 것인가를 계산해야 한다.

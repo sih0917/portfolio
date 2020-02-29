@@ -341,8 +341,7 @@ body {
 
 /*메인 영역*/
 #main {
-    position: absolute;
-    top: 0;
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -851,7 +850,6 @@ section#portfolio {
     color: #fff;
     font-size: 13px;
     cursor: pointer;
-    transition: margin 0.6s;
     text-align: left;
     text-transform: uppercase;
     cursor: pointer;
@@ -1104,18 +1102,6 @@ section#contact {
     }
 }
 
-/*
- .wave_bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 7vh;
-    background: url('../images/wave3.png');
-    background-repeat: repeat-x;
-    animation: animate 2s linear infinite;
-    z-index: 1;
- } */
 .qrcode {
     position: absolute;
     left: 50%;
@@ -1198,7 +1184,6 @@ footer#footer {
     vertical-align: middle;
 }
 
-/*====================================================*/
 /*====================================================*/
 /*====================================================*/
 /*====================================================*/
@@ -1352,7 +1337,6 @@ footer#footer {
     }
 }
 
-/*====================================================*/
 /*====================================================*/
 /*====================================================*/
 /*====================================================*/
@@ -1669,7 +1653,7 @@ footer#footer {
     }
 
     .pf_name li:hover {
-        transform: translateX(-30px);
+        transform: translateX(-20px);
         color: #ffda00;
         font-weight: 600;
     }
