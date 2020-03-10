@@ -24,6 +24,7 @@ html {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    overscroll-behavior: contain;
     /*cursor: url('../images/point.png'), auto;*/
 }
 
@@ -164,15 +165,15 @@ body {
     border: 2px solid #fff;
     border-radius: 10px;
     text-align: center;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .mouse_prev {
-    transform: translateX(-150%);
+    transform: translateX(-50%);
 }
 
 .mouse_next {
-    transform: translateX(50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
 }
 
 .mouse span {
@@ -258,16 +259,13 @@ body {
 }
 
 @keyframes logo-ani {
-
     0%,
     100% {
         transform: rotate(0deg);
     }
-
     55% {
         transform: rotate(540deg);
     }
-
     70% {
         transform: rotate(540deg);
     }
@@ -677,6 +675,7 @@ section#portfolio {
     position: absolute;
     display: block;
     top: 40%;
+    left: 0;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;

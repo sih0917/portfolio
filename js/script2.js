@@ -89,7 +89,7 @@ $(document).ready(function() {
     // 초기 페이지 번호
     var pageIndex = 0;
 
-    // 마우스 버튼 클릭시 화면 아래로 이동
+    /*// 마우스 버튼 클릭시 화면 아래로 이동
     $('.mouse_next').click(function() {
         scrollDir = 'down';
         pageMove();
@@ -97,6 +97,80 @@ $(document).ready(function() {
     $('.mouse_prev').click(function() {
         scrollDir = 'up';
         pageMove();
+    });
+*/
+    // 모바일 스와이프 -------------------------------------------
+    let initialX = null,
+        initialY = null;
+
+    function initTouch(e) {
+        initialX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
+        initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+    };
+
+    function swipeDirection(e) {
+        var diffX = '',
+            diffY = '';
+        if (initialX !== null && initialY !== null) {
+            const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`,
+                currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+
+                diffX = initialX - currentX,
+                diffY = initialY - currentY;
+            /* //방향 확인 콘솔
+            Math.abs(diffX) > Math.abs(diffY) ?
+                (
+                    0 < diffX ?
+                    console.log("to left") :
+                    console.log("to right")
+                ) :
+                (
+                    0 < diffY ?
+                    console.log("to top ") :
+                    console.log("to bottom ")
+                )
+            */
+            initialX = null;
+            initialY = null;
+        }
+        // console.log(diffY);
+        var distance = - diffY;
+        // 기본 스크롤 방향
+        if (distance < 0) {
+            scrollDir = 'down';
+        } else if (distance > 0) {
+            scrollDir = 'up';
+        }
+        // 2번 페이지 포트폴리오의 텍스트를 돌려주는 모션 작업진행
+        if (pageIndex == 2) {
+            if (portWheelCheck == true) {
+                rotateCount = 1;
+                portScroll_Repeat();
+            }
+            return;
+        }
+        // 4번 페이지 works의 스크롤 막아줌
+        if (pageIndex == 3) {
+            workScroll();
+            return;
+        }
+        // 연속 스크롤 막기
+        if (scrollDefence == true) {
+            return;
+        }
+        scrollDefence = true;
+        // 페이지를 움직이자.
+        pageMove();
+    }
+
+    window.addEventListener("touchstart", initTouch);
+    window.addEventListener("touchmove", swipeDirection);
+    window.addEventListener("mousedown", (e) => {
+        initTouch(e),
+            window.addEventListener("mousemove", swipeDirection)
+    });
+    window.addEventListener("mouseup", () => {
+        window.removeEventListener("mousemove", swipeDirection);
     });
 
     // 휠 체크---------------------------------------------------
