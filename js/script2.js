@@ -100,7 +100,11 @@ $(document).ready(function() {
     });
 */
     // 모바일 스와이프 -------------------------------------------
-    let initialX = null,
+    let diff_left = "left",
+        diff_right = "right",
+        diff_top = "top",
+        diff_bottom = "bottom",
+        initialX = null,
         initialY = null;
 
     function initTouch(e) {
@@ -115,31 +119,32 @@ $(document).ready(function() {
             const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`,
                 currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
 
-                diffX = initialX - currentX,
+            diffX = initialX - currentX,
                 diffY = initialY - currentY;
-            /* //방향 확인 콘솔
-            Math.abs(diffX) > Math.abs(diffY) ?
+            //방향 확인 콘솔
+            var direction = Math.abs(diffX) > Math.abs(diffY) ?
                 (
                     0 < diffX ?
-                    console.log("to left") :
-                    console.log("to right")
+                    diff_left : diff_right
                 ) :
                 (
                     0 < diffY ?
-                    console.log("to top ") :
-                    console.log("to bottom ")
+                    diff_top : diff_bottom
                 )
-            */
+
             initialX = null;
             initialY = null;
         }
-        // console.log(diffY);
-        var distance = - diffY;
+
         // 기본 스크롤 방향
-        if (distance < 0) {
-            scrollDir = 'down';
-        } else if (distance > 0) {
-            scrollDir = 'up';
+        if (direction == "top") {
+            scrollDir = "down";
+        } else if (direction == "bottom") {
+            scrollDir = "up";
+        } else if (direction == "left") {
+            scrollDir = "left";
+        } else if (direction == "right") {
+            scrollDir = "right";
         }
         // 2번 페이지 포트폴리오의 텍스트를 돌려주는 모션 작업진행
         if (pageIndex == 2) {
@@ -173,6 +178,27 @@ $(document).ready(function() {
         window.removeEventListener("mousemove", swipeDirection);
     });
 
+    // 좌우 드래그 시 사이드바 열림 닫힘
+    function openSideBar() {
+        var gnbDiv = $('.gnb_m_box');
+        var gnbM_btn = $('.gnb_m_btn');
+        var gnbSpeed = 500;
+
+        if (scrollDir == "left") {
+            // 메뉴 슬라이딩
+            gnbM_btn.addClass('open');
+            gnbDiv.stop().animate({
+                right: 0
+            }, gnbSpeed);
+        } else if (scrollDir == "right") {
+            // 메뉴 사라짐
+            gnbM_btn.removeClass('open');
+            gnbDiv.stop().animate({
+                right: '-100%'
+            }, gnbSpeed);
+        }
+    }
+
     // 휠 체크---------------------------------------------------
     $(this).bind('mousewheel DOMMouseScroll', function(e) {
 
@@ -190,6 +216,7 @@ $(document).ready(function() {
         } else if (distance > 0) {
             scrollDir = 'up';
         }
+
         // 2번 페이지 포트폴리오의 텍스트를 돌려주는 모션 작업진행
         if (pageIndex == 2) {
             if (portWheelCheck == true) {
@@ -215,19 +242,21 @@ $(document).ready(function() {
 
     // 스크롤시 화면 인덱스 값 바뀜
     function pageMove() {
+
         if (scrollDir == "up") {
             pageIndex--;
             if (pageIndex < 0) {
                 scrollDefence = false;
                 pageIndex = 0;
             }
-        } else {
+        } else if (scrollDir == "down") {
             pageIndex++;
             if (pageIndex >= sectionCount - 1) {
                 scrollDefence = false;
                 pageIndex = sectionCount - 1;
             }
         }
+        openSideBar();
         mainPageSlide();
     }
 
@@ -247,15 +276,23 @@ $(document).ready(function() {
             }
             if (pageIndex == 2) {
                 portWheelCheck = true;
-            } else {
+            } else if (scrollDir == 'up') {
                 portWheelCheck = false;
             }
             if (pageIndex == 4) {
-                // 마우스 모양 마지막페이지에선 없애기
+                // 마우스모양 마지막페이지에서 없애기
                 $('.mouse').fadeOut();
-            } else {
+            } else if (scrollDir == 'up') {
                 $('.mouse').fadeIn();
             }
+            // 모바일 gnb on 표시
+            $.each($('.gnb_m > li'), function(index, item){
+                if(index == pageIndex) {
+                    $(this).addClass('on')
+                } else {
+                    $(this).removeClass('on');
+                }
+            });
         });
     }
 
@@ -427,7 +464,7 @@ $(document).ready(function() {
             if (prevFour > portShowTotal - 1) {
                 prevFour = 0;
             }
-        } else {
+        } else if (scrollDir == 'up') {
             // 스크롤 위로 올릴때 배경 변경
             var bgIndex = (portShowIndex + 1) * 10 - 10;
             if (bgIndex < 0) {
@@ -478,6 +515,7 @@ $(document).ready(function() {
                 prevFour = portShowTotal - 1;
             }
         }
+        openSideBar();
         reSetPortLi();
         rotateCount--;
         if (rotateCount > 0) {
@@ -565,6 +603,7 @@ $(document).ready(function() {
     // 워크 스크롤 후 다음 슬라이드로 넘어가는 함수
     function workScroll() {
         var workConPosY = worksContainer.offset().top;
+        openSideBar();
         if (workConPosY >= 0 && scrollDir == 'up') {
             scrollDefence = true;
             pageIndex--;
@@ -635,10 +674,10 @@ $(document).ready(function() {
             left: e.pageX,
             top: e.pageY
         });
-        $('header').mouseenter(function(){
+        $('header').mouseenter(function() {
             pointer.fadeOut();
         });
-        $('header').mouseleave(function(){
+        $('header').mouseleave(function() {
             pointer.fadeIn();
         });
     });
@@ -651,4 +690,46 @@ $(document).ready(function() {
             top: posY
         });
     });
+
+//imageProgress
+    function imagesProgress(){
+        var $container = $("#progress"),
+            $progressBar = $container.find(".progress-bar"),
+            $progressText = $container.find(".progress-text"),
+            imgLoad = imagesLoaded("body"), 
+            imgTotal = imgLoad.images.length,   
+            imgLoaded = 0,                                      
+            current = 0,                            
+            progressTimer = setInterval(updateProgress, 2000 / 60); 
+
+            $progressText.css("display","block");
+
+        imgLoad.on("progress", function(){
+            imgLoaded++;
+        });
+
+        function updateProgress(){
+            var target = ( imgLoaded / imgTotal) * 100;
+            
+            current += ( target - current) * 0.1;
+            $progressBar.css({ width: current + '%' });
+            $progressText.text( Math.floor(current) + '%' );
+            
+            if(current >= 100){
+                clearInterval(progressTimer);
+                $container.addClass("progress-complete");
+                $progressBar.add($progressText)
+                    .delay(300)
+                    .animate({opacity: 0},2000,function(){
+                        $container.animate({opacity: '0'},1000,'easeInOutQuint').animate({top: '-100%'},1000,'easeInOutQuint');
+                        $("body").addClass("active");
+                    });
+            }
+            if(current > 99.9){
+                current = 100;
+            }
+        }
+    }
+    window.setTimeout(imagesProgress, 740);
+
 });
