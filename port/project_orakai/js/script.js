@@ -327,7 +327,7 @@ $(document).ready(function() {
         
         About.click(function(e){
             e.preventDefault();
-            console.log(this);
+            // console.log(this);
             $('.abouthotel').addClass('on');
             scrollDir = "down"
             pageMove();
