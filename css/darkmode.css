@@ -1,119 +1,204 @@
 @charset "utf-8";
 .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 
 /*토글 버튼*/
 .toggle_dark {
-	position: fixed;
-	right: 6vw;
-	bottom: 20px;
-	width: 48px;
-	height: 23px;
-	background: #DEE2E6;
-	border: none;
-	border-radius: 20px;
-	font-size: 0;
-	cursor: pointer;
-	outline: none;
+  position: fixed;
+  right: 6vw;
+  bottom: 20px;
+  width: 48px;
+  height: 23px;
+  background: #dee2e6;
+  border: none;
+  border-radius: 20px;
+  font-size: 0;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
 }
-.toggle_dark > svg { margin: 0 4px; }
+.toggle_dark > svg {
+  margin: 0 4px;
+}
 .toggle_dark .darkmode_dot {
-	position: absolute;
-	left: 2px;
-	top: 2px;
-	width: 19px;
-	height: 19px;
-	border-radius: 50%;
-	background: #B6BFC8;
-	transition: left .2s;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #b6bfc8;
+  transition: left 0.2s;
 }
-.toggle_dark.on { background: #514c66; }
-.toggle_dark.on .darkmode_dot { left: 27px; background: #3a3649; }
-
+.toggle_dark.on {
+  background: #514c66;
+}
+.toggle_dark.on .darkmode_dot {
+  left: 27px;
+  background: #3a3649;
+}
 
 /*light mode*/
-html.light .gnb_m_btn.one > span { background: #000; }
+html.light .gnb_m_btn.one > span {
+  background: #000;
+}
 html.light .gnb_m_btn.one > span:nth-child(4),
 html.light .gnb_m_btn.one > span:nth-child(7),
-html.light .gnb_m_btn.one > span:nth-child(8) { background: none; }
+html.light .gnb_m_btn.one > span:nth-child(8) {
+  background: none;
+}
 
-html.light .gnb_m_btn.one.open > span { background: #fff; }
+html.light .gnb_m_btn.one.open > span {
+  background: #fff;
+}
 html.light .gnb_m_btn.one.open > span:nth-child(2),
 html.light .gnb_m_btn.one.open > span:nth-child(3),
-html.light .gnb_m_btn.one.open > span:nth-child(6) { background: none; }
+html.light .gnb_m_btn.one.open > span:nth-child(6) {
+  background: none;
+}
 
-html.light .bg_click.one { color: #000; }
-html.light .bg_click.one:hover { color: #fff; background: #000; }
+html.light .bg_click.one {
+  color: #000;
+}
+html.light .bg_click.one:hover {
+  color: #fff;
+  background: #000;
+}
 
-html.light .mouse { border: 2px solid #fff; }
-html.light .mouse span { background: #fff; }
-html.light .mouse span::after { background: #fff; }
-html.light .mouse.one { border: 2px solid #000; }
-html.light .mouse.one span { background: #000; }
-html.light .mouse.one span::after { background: #000; }
+html.light .mouse {
+  border: 2px solid #fff;
+}
+html.light .mouse span {
+  background: #fff;
+}
+html.light .mouse span::after {
+  background: #fff;
+}
+html.light .mouse.one {
+  border: 2px solid #000;
+}
+html.light .mouse.one span {
+  background: #000;
+}
+html.light .mouse.one span::after {
+  background: #000;
+}
 
-html.light .gnb>li>a { color: #fff; }
-html.light .gnb>li>a.one { color: #000; }
-html.light .section_tag.one { color: #333; }
+html.light .gnb > li > a {
+  color: #fff;
+}
+html.light .gnb > li > a.one {
+  color: #000;
+}
+html.light .section_tag.one {
+  color: #333;
+}
 
-html.light section#about-me { background: #f4f7fb; }
+html.light section#about-me {
+  background: #f4f7fb;
+}
 
-html.light .square > span { border: 2px solid #333; }
-html.light .square:hover > span { border: none; background: rgba(30, 150, 255, 0.8);}
+html.light .square > span {
+  border: 2px solid #333;
+}
+html.light .square:hover > span {
+  border: none;
+  background: rgba(30, 150, 255, 0.8);
+}
 
 html.light .square .about_content h2,
 html.light .square .about_content p,
-html.light .square .about_content a { color: #333; }
-html.light .square .about_content a { border: 2px solid #333; }
+html.light .square .about_content a {
+  color: #333;
+}
+html.light .square .about_content a {
+  border: 2px solid #333;
+}
 
-html.light .square:hover .about_content a { border: 2px solid #fff; }
+html.light .square:hover .about_content a {
+  border: 2px solid #fff;
+}
 html.light .square:hover .about_content h2,
 html.light .square:hover .about_content p,
-html.light .square:hover .about_content a { color: #fff; }
-html.light .square .about_content a:hover { color: #333; }
+html.light .square:hover .about_content a {
+  color: #fff;
+}
+html.light .square .about_content a:hover {
+  color: #333;
+}
 
-html.light section#portfolio{ background: #f4f7fb;}
+html.light section#portfolio {
+  background: #f4f7fb;
+}
 
-html.light .pf_title { color: #333;}
-html.light .pf_name li { color: #333; }
-html.light .pf_name li.on { color: #333; }
+html.light .pf_title {
+  color: #333;
+}
+html.light .pf_name li {
+  color: #333;
+}
+html.light .pf_name li.on {
+  color: #333;
+}
 
-html.light section#works{ background: #5dd9f8; }
-	
-html.light section#contact { background: #fff;}
-html.light .big_txt2 { color: #000; }
-html.light .big_txt2_box:hover .txt_on { color: #0000ff }
-html.light .qrcode div { color: #fff; }
-html.light .qrcode::after {color: #000;}
-html.light .qrcode:hover div { color: #000; }
+html.light section#works {
+  background: #5dd9f8;
+}
 
-html.light .footer_box { border-top: 2px solid #000; }
-html.light .copy span { color: #333; }
+html.light section#contact {
+  background: #fff;
+}
+html.light .big_txt2 {
+  color: #000;
+}
+html.light .big_txt2_box:hover .txt_on {
+  color: #0000ff;
+}
+html.light .qrcode div {
+  color: #fff;
+}
+html.light .qrcode::after {
+  color: #000;
+}
+html.light .qrcode:hover div {
+  color: #000;
+}
 
-html.light .pointer.fade { opacity: 0; transition: opacity .5s }
+html.light .footer_box {
+  border-top: 2px solid #000;
+}
+html.light .copy span {
+  color: #333;
+}
+
+html.light .pointer.fade {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 
 /* js 필요없을 때 css에서 추가 */
-@media (prefers-color-scheme: light) {  }
-@media (prefers-color-scheme: dark) {  }
-
+@media (prefers-color-scheme: light) {
+}
+@media (prefers-color-scheme: dark) {
+}

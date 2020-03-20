@@ -1,328 +1,540 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="author" content="nino">
-    <meta name="description" content="NINO's Portfolio">
-    <meta name="keywords" content="포트폴리오, 퍼블리셔, portflio, publisher, nino, ninos">
-    <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" href="images/logo4.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="author" content="nino" />
+    <meta name="description" content="NINO's Portfolio" />
+    <meta
+      name="keywords"
+      content="포트폴리오, 퍼블리셔, portflio, publisher, nino, ninos"
+    />
+    <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo4.png" />
     <title>NINO: Chrome에 최적화 되어있습니다 :)</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- progress -->
-    <div class="progress" id ="progress">
-       <span class="progress-bar"></span>
-        <span class="progress-text"></span> 
-        <div class="loader">
-           <div class="loading_image"></div>
-        </div> 
+    <div class="progress" id="progress">
+      <span class="progress-bar"></span>
+      <span class="progress-text"></span>
+      <div class="loader">
+        <div class="loading_image"></div>
+      </div>
     </div>
     <!-- // progress -->
     <!-- 헤더 -->
     <header id="header">
-        <div class="container">
-            <!-- 로고 -->
-            <div class="logo">
-                <a href="index.html">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 79.4 79.4" style="enable-background:new 0 0 79.4 79.4;" xml:space="preserve">
-                        <title>NINO의 포트폴리오 사이트 입니다:)</title>
-                    <style type="text/css">
-                        .st0{opacity:0.5;fill:url(#SVGID_1_);enable-background:new    ;}
-                        .st1{opacity:0.5;fill:url(#SVGID_2_);enable-background:new    ;}
-                        .st2{fill:#FFFFFF;}
-                        .st3{fill:url(#SVGID_3_);}
-                        .st4{fill:url(#SVGID_4_);}
-                        .st5{fill:url(#SVGID_5_);}
-                    </style>
-                    <g>
-                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1937.7292" y1="-1847.3352" x2="-1856.158" y2="-1847.3352" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 -679.3269 -2510.5757)">
-                            <stop  offset="0" style="stop-color:#796AFF"/>
-                            <stop  offset="1" style="stop-color:#FDA085"/>
-                        </linearGradient>
-                        <path class="st0" d="M19.5,70.5c3.1,2.9,8.3,5.3,12.4,6.4c4.7,1.2,9.6,1,14.3,0.1c9.9-1.9,22.3-3.3,26.8-16.1
+      <div class="container">
+        <!-- 로고 -->
+        <div class="logo">
+          <a href="index.html">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 79.4 79.4"
+              style="enable-background:new 0 0 79.4 79.4;"
+              xml:space="preserve"
+            >
+              <title>NINO의 포트폴리오 사이트 입니다:)</title>
+              <style type="text/css">
+                .st0 {
+                  opacity: 0.5;
+                  fill: url(#SVGID_1_);
+                  enable-background: new;
+                }
+                .st1 {
+                  opacity: 0.5;
+                  fill: url(#SVGID_2_);
+                  enable-background: new;
+                }
+                .st2 {
+                  fill: #ffffff;
+                }
+                .st3 {
+                  fill: url(#SVGID_3_);
+                }
+                .st4 {
+                  fill: url(#SVGID_4_);
+                }
+                .st5 {
+                  fill: url(#SVGID_5_);
+                }
+              </style>
+              <g>
+                <linearGradient
+                  id="SVGID_1_"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-1937.7292"
+                  y1="-1847.3352"
+                  x2="-1856.158"
+                  y2="-1847.3352"
+                  gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 -679.3269 -2510.5757)"
+                >
+                  <stop offset="0" style="stop-color:#796AFF" />
+                  <stop offset="1" style="stop-color:#FDA085" />
+                </linearGradient>
+                <path
+                  class="st0"
+                  d="M19.5,70.5c3.1,2.9,8.3,5.3,12.4,6.4c4.7,1.2,9.6,1,14.3,0.1c9.9-1.9,22.3-3.3,26.8-16.1
                             c4.3-10,5.8-21.1,5.3-32c-0.3-5.7-1.6-11.7-5.6-16c-3.3-3.6-8.4-6.4-13-8C30.8-5.2,8.8,13.5,3.6,19.3
-                            C-9.6,34.3,16.5,67.6,19.5,70.5z"/>
-                    </g>
-                    <g>
-                            <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="133.2335" y1="1531.8241" x2="211.7783" y2="1531.8241" gradientTransform="matrix(1 0 0 1 -132.3921 -1492.8457)">
-                            <stop  offset="0" style="stop-color:#F66ABA"/>
-                            <stop  offset="1" style="stop-color:#FDA085"/>
-                        </linearGradient>
-                        <path class="st1" d="M47.6,2.2c-4.1-1-17.3-2-21.3-0.9c-4.6,1.2-8.6,3.9-12.2,7C6.6,14.9-0.3,24.3,1,35c1.3,10.9,4,22.5,9.9,31.9
-                            c3.1,4.9,5.3,7.6,10.8,9.4c4.6,1.5,19,0.7,23.8-0.2C75.1,70.5,77.7,45.7,79.1,38C82.9,18.2,47.6,2.2,47.6,2.2z"/>
-                    </g>
-                    <g>
-                        <rect x="31" y="27.6" class="st2" width="3.8" height="14.5"/>
-                        <path class="st2" d="M52,56.7h6.3h3.8v-3.2v-8.1v-3.2h-3.8H52h-3.8v3.2v8.1v3.2H52z M52,45.4h6.3v8.1H52V45.4z"/>
-                        <polygon class="st2" points="34.8,56.7 34.8,47.6 41.1,56.7 44.9,56.7 44.9,42.2 41.1,42.2 41.1,51.3 34.8,42.2 31,42.2 31,56.7    
-                            "/>
-                        <polygon class="st2" points="17.3,42.2 17.3,33 23.6,42.2 27.4,42.2 27.4,27.6 23.6,27.6 23.6,36.7 17.3,27.6 13.5,27.6 13.5,42.2 
-                                "/>
-                    </g>
-                    <g>
-                        <g>
-                            <path class="st2" d="M58.3,20.4c-1-1-4.5-1-6.7,1.2l5.5,5.5C59.3,25,59.3,21.4,58.3,20.4z"/>
-                        </g>
-                        <polygon class="st2" points="48,35.3 43.4,30.7 46.5,28.8 51.1,22.1 56.6,27.6 50,32.3    "/>
-                        <path class="st2" d="M48.6,24.4L46,28.1l-3.6,0.8C42.3,28.9,43.8,25,48.6,24.4z"/>
-                        <path class="st2" d="M54.3,30.1l-3.7,2.7l-0.8,3.7C49.9,36.5,53.8,35,54.3,30.1z"/>
-                        
-                            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="42.9331" y1="50.3133" x2="38.8327" y2="43.2114" gradientTransform="matrix(1 0 0 -1 0 82)">
-                            <stop  offset="0" style="stop-color:#E5E5E5"/>
-                            <stop  offset="1" style="stop-color:#FDA085;stop-opacity:0.1"/>
-                        </linearGradient>
-                        <path class="st3" d="M41.3,35.6c-1.7,1.7-3.2,2.8-3.4,2.6s1-1.7,2.6-3.4c1.7-1.7,3.2-2.8,3.4-2.6S42.9,34,41.3,35.6z"/>
-                        
-                            <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="45.329" y1="47.9062" x2="41.2285" y2="40.8042" gradientTransform="matrix(1 0 0 -1 0 82)">
-                            <stop  offset="0" style="stop-color:#E5E5E5"/>
-                            <stop  offset="1" style="stop-color:#FDA085;stop-opacity:0.1"/>
-                        </linearGradient>
-                        <path class="st4" d="M43.7,38c-1.7,1.7-3.2,2.8-3.4,2.6s1-1.7,2.6-3.4c1.7-1.7,3.2-2.8,3.4-2.6S45.3,36.4,43.7,38z"/>
-                        
-                            <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="43.2961" y1="48.8344" x2="37.7253" y2="39.1858" gradientTransform="matrix(1 0 0 -1 0 82)">
-                            <stop  offset="0" style="stop-color:#E5E5E5"/>
-                            <stop  offset="1" style="stop-color:#FDA085;stop-opacity:0.1"/>
-                        </linearGradient>
-                        <path class="st5" d="M41,38.5c-2.3,2.3-4.3,3.9-4.6,3.6c-0.3-0.3,1.3-2.3,3.6-4.6s4.3-3.9,4.6-3.6C44.9,34.2,43.3,36.3,41,38.5z"/>
-                    </g>
-                    </svg>
-                </a>
-            </div>
-            <!-- 네비게이션 -->
-            <nav>
-                <ul class="gnb">
-                    <li><a href="#home">home
-                            <span class="bar"></span>
-                        </a></li>
-                    <li><a href="#about-me">about me
-                            <span class="bar"></span>
-                        </a></li>
-                    <li><a href="#portfolio">Coding
-                            <span class="bar"></span>
-                        </a></li>
-                    <li><a href="#works">Design
-                            <span class="bar"></span>
-                        </a></li>
-                    <li><a href="#contact">contact
-                            <span class="bar"></span>
-                        </a></li>
-                </ul>
-                <div class="gnb_m_btn">모바일 버튼
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-            <!-- 모바일 네비게이션 -->
-            <div class="gnb_m_box">
-                <ul class="gnb_m">
-                    <li class="on"><a href="#home">home</a></li>
-                    <li><a href="#about-me">about me</a></li>
-                    <li><a href="#portfolio">Coding</a></li>
-                    <li><a href="#works">Design</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
+                            C-9.6,34.3,16.5,67.6,19.5,70.5z"
+                />
+              </g>
+              <g>
+                <linearGradient
+                  id="SVGID_2_"
+                  gradientUnits="userSpaceOnUse"
+                  x1="133.2335"
+                  y1="1531.8241"
+                  x2="211.7783"
+                  y2="1531.8241"
+                  gradientTransform="matrix(1 0 0 1 -132.3921 -1492.8457)"
+                >
+                  <stop offset="0" style="stop-color:#F66ABA" />
+                  <stop offset="1" style="stop-color:#FDA085" />
+                </linearGradient>
+                <path
+                  class="st1"
+                  d="M47.6,2.2c-4.1-1-17.3-2-21.3-0.9c-4.6,1.2-8.6,3.9-12.2,7C6.6,14.9-0.3,24.3,1,35c1.3,10.9,4,22.5,9.9,31.9
+                            c3.1,4.9,5.3,7.6,10.8,9.4c4.6,1.5,19,0.7,23.8-0.2C75.1,70.5,77.7,45.7,79.1,38C82.9,18.2,47.6,2.2,47.6,2.2z"
+                />
+              </g>
+              <g class="nino">
+                <rect x="31" y="27.6" class="st2" width="3.8" height="14.5" />
+                <path
+                  class="st2"
+                  d="M52,56.7h6.3h3.8v-3.2v-8.1v-3.2h-3.8H52h-3.8v3.2v8.1v3.2H52z M52,45.4h6.3v8.1H52V45.4z"
+                />
+                <polygon
+                  class="st2"
+                  points="34.8,56.7 34.8,47.6 41.1,56.7 44.9,56.7 44.9,42.2 41.1,42.2 41.1,51.3 34.8,42.2 31,42.2 31,56.7    
+                            "
+                />
+                <polygon
+                  class="st2"
+                  points="17.3,42.2 17.3,33 23.6,42.2 27.4,42.2 27.4,27.6 23.6,27.6 23.6,36.7 17.3,27.6 13.5,27.6 13.5,42.2 
+                                "
+                />
+              </g>
+              <g class="ship">
+                <g>
+                  <path
+                    class="st2"
+                    d="M58.3,20.4c-1-1-4.5-1-6.7,1.2l5.5,5.5C59.3,25,59.3,21.4,58.3,20.4z"
+                  />
+                </g>
+                <polygon
+                  class="st2"
+                  points="48,35.3 43.4,30.7 46.5,28.8 51.1,22.1 56.6,27.6 50,32.3    "
+                />
+                <path
+                  class="st2"
+                  d="M48.6,24.4L46,28.1l-3.6,0.8C42.3,28.9,43.8,25,48.6,24.4z"
+                />
+                <path
+                  class="st2"
+                  d="M54.3,30.1l-3.7,2.7l-0.8,3.7C49.9,36.5,53.8,35,54.3,30.1z"
+                />
+
+                <linearGradient
+                  id="SVGID_3_"
+                  gradientUnits="userSpaceOnUse"
+                  x1="42.9331"
+                  y1="50.3133"
+                  x2="38.8327"
+                  y2="43.2114"
+                  gradientTransform="matrix(1 0 0 -1 0 82)"
+                >
+                  <stop offset="0" style="stop-color:#E5E5E5" />
+                  <stop
+                    offset="1"
+                    style="stop-color:#FDA085;stop-opacity:0.1"
+                  />
+                </linearGradient>
+                <path
+                  class="st3"
+                  d="M41.3,35.6c-1.7,1.7-3.2,2.8-3.4,2.6s1-1.7,2.6-3.4c1.7-1.7,3.2-2.8,3.4-2.6S42.9,34,41.3,35.6z"
+                />
+
+                <linearGradient
+                  id="SVGID_4_"
+                  gradientUnits="userSpaceOnUse"
+                  x1="45.329"
+                  y1="47.9062"
+                  x2="41.2285"
+                  y2="40.8042"
+                  gradientTransform="matrix(1 0 0 -1 0 82)"
+                >
+                  <stop offset="0" style="stop-color:#E5E5E5" />
+                  <stop
+                    offset="1"
+                    style="stop-color:#FDA085;stop-opacity:0.1"
+                  />
+                </linearGradient>
+                <path
+                  class="st4"
+                  d="M43.7,38c-1.7,1.7-3.2,2.8-3.4,2.6s1-1.7,2.6-3.4c1.7-1.7,3.2-2.8,3.4-2.6S45.3,36.4,43.7,38z"
+                />
+
+                <linearGradient
+                  id="SVGID_5_"
+                  gradientUnits="userSpaceOnUse"
+                  x1="43.2961"
+                  y1="48.8344"
+                  x2="37.7253"
+                  y2="39.1858"
+                  gradientTransform="matrix(1 0 0 -1 0 82)"
+                >
+                  <stop offset="0" style="stop-color:#E5E5E5" />
+                  <stop
+                    offset="1"
+                    style="stop-color:#FDA085;stop-opacity:0.1"
+                  />
+                </linearGradient>
+                <path
+                  class="st5"
+                  d="M41,38.5c-2.3,2.3-4.3,3.9-4.6,3.6c-0.3-0.3,1.3-2.3,3.6-4.6s4.3-3.9,4.6-3.6C44.9,34.2,43.3,36.3,41,38.5z"
+                />
+              </g>
+            </svg>
+          </a>
         </div>
-        <!-- 마우스 모양 -->
-        <div class="mouse mouse_next">
+        <!-- 네비게이션 -->
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#home"
+                >home
+                <span class="bar"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#about-me"
+                >about me
+                <span class="bar"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio"
+                >Coding
+                <span class="bar"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#works"
+                >Design
+                <span class="bar"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact"
+                >contact
+                <span class="bar"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="gnb_m_btn">
+            모바일 버튼
             <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <!-- 모바일 네비게이션 -->
+        <div class="gnb_m_box">
+          <ul class="gnb_m">
+            <li class="on"><a href="#home">home</a></li>
+            <li><a href="#about-me">about me</a></li>
+            <li><a href="#portfolio">Coding</a></li>
+            <li><a href="#works">Design</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
         </div>
-        <!-- 다크모드 -->
-        <button aria-label="Toggle Dark Mode" type="button" class="toggle_dark">
-            <span class="css-hiuxy7">Toggle Dark Mode</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="css-u5imha">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="css-2iq1gg">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-            <div class="darkmode_dot"></div>
-        </button>
+      </div>
+      <!-- 마우스 모양 -->
+      <div class="mouse mouse_next">
+        <span></span>
+      </div>
+      <!-- 다크모드 -->
+      <button aria-label="Toggle Dark Mode" type="button" class="toggle_dark">
+        <span class="css-hiuxy7">Toggle Dark Mode</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="css-u5imha"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="css-2iq1gg"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <div class="darkmode_dot"></div>
+      </button>
     </header>
     <!--// 헤더 -->
     <!-- 전체 레이아웃 -->
     <div id="wrap">
-        <div id="main">
-            <!-- 별 배경 -->
-            <section id="home" class="parallax_group">
-                <span class="section_tag">home</span>
-                <div class="parallax_layer sky"></div>
-                <div class="parallax_layer moon"></div>
-                <div class="parallax_layer people1"></div>
-                <div class="parallax_layer people2"></div>
-                <div class="parallax_layer people3"></div>
-                <div class="parallax_layer people4"></div>
-                <div class="txt">
-                    <a href="work/portfolio.html" target="_blank">
-                        <span class="txt1">Creative</span><br>
-                        <span class="txt2">Portfolio</span>
-                    </a>
+      <div id="main">
+        <!-- 별 배경 -->
+        <section id="home" class="parallax_group">
+          <span class="section_tag">home</span>
+          <div class="parallax_layer sky"></div>
+          <div class="parallax_layer moon"></div>
+          <div class="parallax_layer people1"></div>
+          <div class="parallax_layer people2"></div>
+          <div class="parallax_layer people3"></div>
+          <div class="parallax_layer people4"></div>
+          <div class="txt">
+            <a href="work/portfolio.html" target="_blank">
+              <span class="txt1">Creative</span><br />
+              <span class="txt2">Portfolio</span>
+            </a>
+          </div>
+        </section>
+        <section id="about-me">
+          <span class="section_tag">about me</span>
+          <div class="square">
+            <span>line</span>
+            <span>line</span>
+            <span>line</span>
+            <div class="about_content">
+              <h2>ABOUT</h2>
+              <p>
+                안녕하세요!<br />
+                준비된 웹디자이너 신인호입니다.<br />
+                다양한 경험을 안고 웹디자인 세계에<br />
+                문을 두드립니다.
+                <br /><br />
+                <span>COLORFUL</span>
+                <span>Designer</span><br />
+                신입의 열정을 품은! 다채로운 색을 지닌! <br />
+                프로페셔널한 팀원이 되겠습니다.<br /><br />
+              </p>
+              <a href="project_horizon_nino/resume.pdf" target="_blank"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div id="square-ie" class="square">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="about_content">
+              <h2>크롬에서 보실 수 있습니다.</h2>
+              <a href="project_horizon_nino/resume.pdf" target="_blank"
+                >RESUME</a
+              >
+            </div>
+          </div>
+        </section>
+        <section id="portfolio">
+          <span class="section_tag">portfolio<br />- Coding</span>
+          <div class="container-pf">
+            <div class="pf_box">
+              <div class="pf_title">Coding</div>
+              <div class="pf_circle">
+                <div>
+                  <div class="info">
+                    <h3>SRT 반응형 사이트</h3>
+                    <span>반응형 WEB / Publish 100%</span>
+                    <a
+                      class="portlink"
+                      href="port/project_srt/index.html"
+                      target="_blank"
+                      >Detail View</a
+                    >
+                    <a
+                      class="originlink"
+                      href="https://etk.srail.co.kr/main.do"
+                      target="_blank"
+                      >Original Site</a
+                    >
+                  </div>
+                  <img src="images/portfolio/srt.jpg" alt="포트폴리오 사진" />
                 </div>
-            </section>
-            <section id="about-me">
-                <span class="section_tag">about me</span>
-                <div class="square">
-                    <span>line</span>
-                    <span>line</span>
-                    <span>line</span>
-                    <div class="about_content">
-                        <h2>ABOUT</h2>
-                        <p>안녕하세요!<br>
-                            준비된 퍼블리셔 신인호입니다.<br>
-                            다양한 경험을 안고 웹디자인 세계에<br>
-                            문을 두드립니다.
-                            <br><br>
-                            <span>COLORFUL</span>
-                            <span>Designer</span><br>
-                            신입의 열정을 품은! 다채로운 색을 지닌! <br>
-                            프로페셔널한 퍼블리셔가 되겠습니다.<br><br>
-                        </p>
-                        <a href="project_horizon_nino/resume.pdf" target="_blank">Read More</a>
-                    </div>
-                </div>
-                <div id="square-ie" class="square">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div class="about_content">
-                        <h2>크롬에서 보실 수 있습니다.</h2>
-                        <a href="project_horizon_nino/resume.pdf" target="_blank">RESUME</a>
-                    </div>
-                </div>
-            </section>
-            <section id="portfolio">
-                <span class="section_tag">portfolio<br>- Coding</span>
-                <div class="container-pf">
-                    <div class="pf_box">
-                        <div class="pf_title">Coding</div>
-                        <div class="pf_circle">
-                            <div>
-                                <div class="info">
-                                    <h3>SRT 반응형 사이트</h3>
-                                    <span>반응형 WEB / Publish 100%</span>
-                                    <a class="portlink" href="port/project_srt/index.html" target="_blank">Detail View</a>
-                                    <a class="originlink" href="https://etk.srail.co.kr/main.do" target="_blank">Original Site</a>
-                                </div>
-                                <img src="images/portfolio/srt.jpg" alt="포트폴리오 사진">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pf_name_circle">
-                    <img src="images/circle.png" alt="달 이미지">
-                </div>
-                <div class="pf_name">
-                    <ul>
-                        <li class="on">1. SRT</li>
-                        <li>2. NUHAT Mall</li>
-                        <li>3. Orakai Hotel</li>
-                        <li>4. Starbucks Coffee</li>
-                        <li>5. In-N-Out Burger</li>
-                        <li>6. Dongsan Hospital</li>
-                        <li>7. Seoul Cityholl</li>
-                        <li>8. Daegu Sisul</li>
-                        <li>9. WISET KMU</li>
-                        <li>10. Dohsh</li>
-                    </ul>
-                </div>
-            </section>
-            <section id="works">
-                <div class="big_txt" data-text="DESIGN">DESIGN</div>
-                <span class="section_tag">portfolio<br>- Design</span>
-                <div class="works_wrap">
-                    <div class="works_container">
-                        <div class="paddingtop100"></div>
-                        <div class="works_conbox">
-                            <a href="work/portfolio.html" target="_blank"></a>
-                        </div>
-                        <div class="works_conbox">
-                            <a href="work/app.html" target="_blank"></a>
-                        </div>
-                        <div class="works_conbox">
-                            <a href="work/hotel.html" target="_blank"></a>
-                        </div>
-                        <div class="works_conbox">
-                            <a href="work/under_armour.html" target="_blank"></a>
-                        </div>
-                        <div class="works_conbox">
-                            <a href="work/instagram.html" target="_blank"></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <div class="pointer"></div>
-                <span class="section_tag">contact</span>
-                <div class="big_txt2_box">
-                    <a href="mailto:sih0917@gmail.com" title="Contact me :: 클릭하시면 메일을 보내실 수 있습니다.">
-                        <div class="big_txt2">sih</div>
-                        <div class="big_txt2">0917</div>
-                        <div class="big_txt2 txt_on">@</div>
-                        <div class="big_txt2">g</div>
-                        <div class="big_txt2">mail</div>
-                        <div class="big_txt2">.</div>
-                        <div class="big_txt2">com</div>
-                    </a>
-                </div>
-                <footer id="footer">
-                    <div class="footer_box">
-                        <div class="copy">
-                            <span>Copyrights 2019.</span>
-                            <img src="images/logo_01.svg" alt="NINO logo" title="봐주셔서 감사합니다. ^-^">
-                            <span>All rights reserved.</span>
-                        </div>
-                    </div>
-                    <div class="qrcode">
-                        <img src="images/qrcode.png" alt="qrcode">
-                        <div>"카카오톡" QR코드</div>
-                    </div>
-                </footer>
-            </section>
-        </div>
+              </div>
+            </div>
+          </div>
+          <div class="pf_name_circle">
+            <img src="images/circle.png" alt="달 이미지" />
+          </div>
+          <div class="pf_name">
+            <ul>
+              <li class="on">1. SRT</li>
+              <li>2. NUHAT Mall</li>
+              <li>3. Orakai Hotel</li>
+              <li>4. Starbucks Coffee</li>
+              <li>5. In-N-Out Burger</li>
+              <li>6. Dongsan Hospital</li>
+              <li>7. Seoul Cityholl</li>
+              <li>8. Daegu Sisul</li>
+              <li>9. WISET KMU</li>
+              <li>10. Dohsh</li>
+            </ul>
+          </div>
+        </section>
+        <section id="works">
+          <div class="big_txt" data-text="DESIGN">DESIGN</div>
+          <span class="section_tag">portfolio<br />- Design</span>
+          <div class="works_wrap">
+            <div class="works_container cfixed">
+              <div class="paddingtop100"></div>
+              <div class="works_conbox">
+                <a href="work/portfolio.html" target="_blank"></a>
+              </div>
+              <div class="works_conbox">
+                <a href="work/app.html" target="_blank"></a>
+              </div>
+              <div class="works_conbox">
+                <a href="work/hotel.html" target="_blank"></a>
+              </div>
+              <div class="works_conbox">
+                <a href="work/under_armour.html" target="_blank"></a>
+              </div>
+              <div class="works_conbox">
+                <a href="work/instagram.html" target="_blank"></a>
+              </div>
+              <div class="works_conbox codestart">
+                <iframe src="assets/ani1.html" frameborder="0" scrolling="no"></iframe>
+                <a
+                  class="btn"
+                  href="https://codepen.io/sih0917/pen/bGdMzGO"
+                  target="_blank"
+                  >code view</a
+                >
+              </div>
+              <div class="works_conbox">
+                <iframe src="assets/ani2.html" frameborder="0" scrolling="no"></iframe>
+                <a
+                  class="btn"
+                  href="https://codepen.io/sih0917/pen/bGdMzNO"
+                  target="_blank"
+                  >code view</a
+                >
+              </div>
+              <div class="works_conbox">
+                <iframe src="assets/ani3.html" frameborder="0" scrolling="no"></iframe>
+                <a
+                  class="btn"
+                  href="https://codepen.io/sih0917/pen/yLNjZYL"
+                  target="_blank"
+                  >code view</a
+                >
+              </div>
+              <div class="works_conbox">
+                <iframe src="assets/ani4.html" frameborder="0" scrolling="no"></iframe>
+                <a class="btn" href="https://codepen.io/sih0917/pen/OJVZdyB"
+                  target="_blank">code view</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <div class="pointer"></div>
+          <span class="section_tag">contact</span>
+          <div class="big_txt2_box">
+            <a
+              href="mailto:sih0917@gmail.com"
+              title="Contact me :: 클릭하시면 메일을 보내실 수 있습니다."
+            >
+              <div class="big_txt2">sih</div>
+              <div class="big_txt2">0917</div>
+              <div class="big_txt2 txt_on">@</div>
+              <div class="big_txt2">g</div>
+              <div class="big_txt2">mail</div>
+              <div class="big_txt2">.</div>
+              <div class="big_txt2">com</div>
+            </a>
+          </div>
+          <footer id="footer">
+            <div class="footer_box">
+              <div class="copy">
+                <span>Copyrights 2019.</span>
+                <img
+                  src="images/logo_01.svg"
+                  alt="NINO logo"
+                  title="봐주셔서 감사합니다. ^-^"
+                />
+                <span>All rights reserved.</span>
+              </div>
+            </div>
+            <div class="qrcode">
+              <img src="images/qrcode.png" alt="qrcode" />
+              <div>"카카오톡" QR코드</div>
+            </div>
+          </footer>
+        </section>
+      </div>
     </div>
     <!-- 스크립트 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
     <script src="js/gnb.js"></script>
     <script src="js/script2.js"></script>
     <script src="js/darkmode.js"></script>
     <script>
-    $(function() {
+      $(function() {
         var agent = navigator.userAgent.toLowerCase();
-        if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
-            alert("크롬(Chrome)에 최적화 되어 있습니다.");
+        if (
+          (navigator.appName == "Netscape" &&
+            navigator.userAgent.search("Trident") != -1) ||
+          agent.indexOf("msie") != -1
+        ) {
+          alert("크롬(Chrome)에 최적화 되어 있습니다.");
         }
-    });
+      });
     </script>
-</body>
-
+  </body>
 </html>

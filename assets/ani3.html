@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #wrap {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        -webkit-perspective: 300px;
+        perspective: 500px;
+    }
+
+    .cube {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: ani-rotate 3s linear infinite;
+    }
+	@keyframes ani-rotate {
+		0% {
+			transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+		}
+		50% { transform: scale(0.6) rotateX(180deg) rotateY(180deg) rotateZ(180deg);;  }
+		100% {
+			transform: scale(1) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+		}
+	}
+
+    .cube > div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: 0;
+		/*backface-visibility: hidden;*/
+       
+		opacity: .7;
+		color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 200px;
+    }
+	/*앞*/
+    .cube > div:nth-child(1) {
+        transform: rotateY(0deg) translateZ(100px);
+        background: red;
+    }
+	/*뒤*/
+    .cube > div:nth-child(2) {
+        transform: rotateY(180deg) translateZ(100px);
+        background: blue;
+    }
+	/*좌*/
+    .cube > div:nth-child(3) {
+        transform: rotateY(-90deg) translateZ(100px);
+        background: green;
+    }
+	/*우*/
+    .cube > div:nth-child(4) {
+        transform: rotateY(90deg) translateZ(100px);
+        background: yellow;
+    }
+	/*위*/
+    .cube > div:nth-child(5) {
+        transform: rotateX(90deg) translateZ(100px);
+        background: purple;
+    }
+	/*아래*/
+    .cube > div:nth-child(6) {
+        transform: rotateX(270deg) translateZ(100px);
+        background: skyblue;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="cube">
+            <div>front</div>
+            <div>back</div>
+            <div>left</div>
+            <div>right</div>
+            <div>top</div>
+            <div>bottom</div>
+        </div>
+    </div>
+</body>
+
+</html>

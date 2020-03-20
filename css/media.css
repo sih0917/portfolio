@@ -498,6 +498,9 @@
 (-ms-high-contrast: none) {
 
     /* Enter your style code */
+    #progress {
+        display: none;
+    }
     section {
         display: none;
     }

@@ -52,6 +52,34 @@
 		.site_new a {
 			color: gold;
 		}
+		@media all and (max-width: 1000px) {
+			.site_box {
+			position: absolute;
+			right: 20px;
+			top: 40px;
+			}
+			.site_box > div {
+				display: block;
+				clear: both;
+				padding: 5px 15px;
+				border-radius: 20px;
+				border: 2px solid #fff;
+				margin-bottom: 10px;
+				margin-left: 20px;
+			}
+		}
+		@media all and (max-width: 425px) {
+			.site_box {
+			position: absolute;
+			right: 10px;
+			top: 25px;
+			}
+			.site_box > div {
+				font-size: 11px;
+				padding: 2px 5px;
+				margin-bottom: 5px;
+			}
+		}
 	</style>
 <body>
 	<div id="wrap">
